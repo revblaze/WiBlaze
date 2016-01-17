@@ -13,15 +13,15 @@ The WiBlaze web browser was built from the ground up for durability, and above a
 
 ## Completed
 - [ ] UI Foundation
-    - [ ] URLSearchBar
-    - [ ] UIWebView
+    - [x] URLSearchBar
+    - [x] <s>UIWebView</s> WKWebView
     - [ ] Back & Forward
     - [ ] Stop & Refresh
     - [ ] Add to Bookmarks
     - [ ] Show Bookmarks
-- [ ] URLSearchBar
-    - [ ] URL-Search Detection
-    - [ ] Loading Search & URL
+- [x] URLSearchBar
+    - [x] URL-Search Detection
+    - [x] Loading Search & URL
 - [ ] Bookmarks
     - [ ] Adding Bookmarks
     - [ ] Displaying Bookmarks
@@ -39,7 +39,7 @@ Requires iOS 8.0 or later.
 
 ## MIT License
 
-Copyright © 2015 Justin Bush. All rights reserved.
+Copyright © 2016 Justin Bush. All rights reserved.
 
 ```
 Permission is hereby granted, free of charge, to any person obtaining a copy

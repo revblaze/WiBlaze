@@ -59,6 +59,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
     
     func textFieldDidUpdate(sender: UITextField) {
+        if (textField.text!.rangeOfCharacterFromSet(NSCharacterSet.whitespaceCharacterSet()) != nil) {
         guard
             let text = sender.text,
             query = text.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet()),
@@ -67,19 +68,21 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView.hidden = false
         webView.loadRequest(NSURLRequest(URL: url))
         
-        // Validate URL
-        NSURL.validateUrl(textField.text, completion: { (success, urlString, error) -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if (success) {
-                    self.webView.hidden = false
-                    let request = NSURLRequest(URL: NSURL(string: urlString!)!)
-                    print(urlString!)
-                    self.webView.loadRequest(request)
-                } else {
-                    self.webView.stopLoading()
-                    //self.webView.hidden = true
-                }
+        } else {
+            // Validate URL
+            NSURL.validateUrl(textField.text, completion: { (success, urlString, error) -> Void in
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    if (success) {
+                        self.webView.hidden = false
+                        let request = NSURLRequest(URL: NSURL(string: urlString!)!)
+                        print(urlString!)
+                        self.webView.loadRequest(request)
+                    } else {
+                        self.webView.stopLoading()
+                        //self.webView.hidden = true
+                    }
+                })
             })
-        })
+        }
     }
 }

@@ -81,7 +81,8 @@ extension NSURL {
                 
                 // URL failed - No Response
                 if (error != nil) {
-                    completion(success: false, urlString: url, error: "The url: \(url) received no response")
+                    // NOTE: Does not take in to account URL redirects (https://goo.gl/rt08xg)
+                    completion(success: true, urlString: url, error: "The url: \(url) received no response")
                     print("URL received no response")
                     print(url)
                     return

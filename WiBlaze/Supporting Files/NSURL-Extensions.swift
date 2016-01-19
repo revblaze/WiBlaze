@@ -24,6 +24,7 @@ extension NSURL {
         // Ignore Nils & Empty Strings
         if (urlString == nil || urlString == "") {
             completion(success: false, urlString: nil, error: "URL String was empty")
+            print("String is empty")
             return
         }
         
@@ -32,6 +33,7 @@ extension NSURL {
         for prefix in prefixes {
             if ((prefix.rangeOfString(urlString!, options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil, locale: nil)) != nil){
                 completion(success: false, urlString: nil, error: "URL String was prefix only")
+                print("Only prefix used")
                 return
             }
         }
@@ -80,6 +82,8 @@ extension NSURL {
                 // URL failed - No Response
                 if (error != nil) {
                     completion(success: false, urlString: url, error: "The url: \(url) received no response")
+                    print("URL received no response")
+                    print(url)
                     return
                 }
                 
@@ -88,12 +92,14 @@ extension NSURL {
                     if ((urlResponse.statusCode >= 200 && urlResponse.statusCode < 400) || urlResponse.statusCode == 405) {
                         // 200-399 = Valid Responses, 405 = Valid Response (Weird Response on some valid URLs)
                         completion(success: true, urlString: url, error: "The url: \(url) is valid!")
+                        print("URL is valid")
                         return
                     }
                         
                     else {
                         // Error
                         completion(success: false, urlString: url, error: "The url: \(url) received a \(urlResponse.statusCode) response")
+                        print("URL returned error")
                         return
                     }
                 }

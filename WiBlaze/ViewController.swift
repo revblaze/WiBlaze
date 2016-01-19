@@ -12,25 +12,29 @@ import WebKit
 class ViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
-    //var loadingView: WKWebView!
+    var loadingView: WKWebView!
     @IBOutlet var textField: UITextField!
 
     override func loadView() {
-        view = webView
+        
         webView = WKWebView()
         webView.navigationDelegate = self
         //webView.backgroundColor = UIColor.whiteColor()
         //webView.opaque = true
         
-/*      
-        view = loadingView
-        view.addSubview(loadingView)
         loadingView = WKWebView()
         loadingView.navigationDelegate = self
-        loadingView.hidden = true
+        
         loadingView.alpha = 0.5
         loadingView.backgroundColor = UIColor.whiteColor()
-*/
+        
+        view = webView
+        //view = loadingView
+        
+        //view.addSubview(webView)
+        view.addSubview(loadingView)
+        
+        loadingView.hidden = true
         
         UIApplication.sharedApplication().statusBarStyle = .Default
     }
@@ -42,10 +46,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView.loadRequest(NSURLRequest(URL: url))
         webView.allowsBackForwardNavigationGestures = true
         
-/*
         let loadingURL = NSBundle.mainBundle().URLForResource("LoaderPhone", withExtension:"html")!
         self.loadingView.loadRequest(NSURLRequest(URL: loadingURL))
-*/
         
         // Notification observer for textField
         self.textField.addTarget(self, action: "textFieldDidUpdate:", forControlEvents: UIControlEvents.EditingChanged)

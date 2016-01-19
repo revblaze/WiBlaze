@@ -29,6 +29,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
         loadingView.alpha = 0.5
         loadingView.backgroundColor = UIColor.whiteColor()
         
+        view.addSubview(webView)
+        view.addSubview(loadingView)
+        
         UIApplication.sharedApplication().statusBarStyle = .Default
     }
     

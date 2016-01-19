@@ -92,13 +92,13 @@ class ViewController: UIViewController, WKNavigationDelegate {
         NSURL.validateUrl(textField.text, completion: { (success, urlString, error) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if (success) {
-                    self.webView.hidden = false
+                    self.loadingView.hidden = true
                     let request = NSURLRequest(URL: NSURL(string: urlString!)!)
                     print(urlString!)
                     self.webView.loadRequest(request)
                 } else {
                     self.webView.stopLoading()
-                    //self.webView.hidden = true
+                    self.loadingView.hidden = false
                 }
             })
         })

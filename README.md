@@ -26,6 +26,9 @@ The WiBlaze web browser was built from the ground up for durability, and above a
     - [ ] Adding Bookmarks
     - [ ] Displaying Bookmarks
     - [ ] Loading Bookmarks
+- [ ] Fillr
+    - [ ] Implement 
+    - [ ] Test with WKWebView
 
 ## Known Errors
 None as of yet.

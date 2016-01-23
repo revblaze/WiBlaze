@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4DE689771C4AEC3D003AE3C7"
+               BlueprintIdentifier = "4DFDB8B51C53B65A00B3703F"
                BuildableName = "WiBlaze.app"
                BlueprintName = "WiBlaze"
                ReferencedContainer = "container:WiBlaze.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4DE689771C4AEC3D003AE3C7"
+            BlueprintIdentifier = "4DFDB8B51C53B65A00B3703F"
             BuildableName = "WiBlaze.app"
             BlueprintName = "WiBlaze"
             ReferencedContainer = "container:WiBlaze.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4DE689771C4AEC3D003AE3C7"
+            BlueprintIdentifier = "4DFDB8B51C53B65A00B3703F"
             BuildableName = "WiBlaze.app"
             BlueprintName = "WiBlaze"
             ReferencedContainer = "container:WiBlaze.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4DE689771C4AEC3D003AE3C7"
+            BlueprintIdentifier = "4DFDB8B51C53B65A00B3703F"
             BuildableName = "WiBlaze.app"
             BlueprintName = "WiBlaze"
             ReferencedContainer = "container:WiBlaze.xcodeproj">

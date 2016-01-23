@@ -7,43 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D2730A41C4C20A2000AA1B4 /* LoaderPad.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D2730A21C4C20A2000AA1B4 /* LoaderPad.html */; };
-		4D2730A51C4C20A2000AA1B4 /* LoaderPad.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4D2730A31C4C20A2000AA1B4 /* LoaderPad.svg */; };
-		4D2730A81C4C221C000AA1B4 /* LoaderPhone.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D2730A61C4C221C000AA1B4 /* LoaderPhone.html */; };
-		4D2730A91C4C221C000AA1B4 /* LoaderPhone.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4D2730A71C4C221C000AA1B4 /* LoaderPhone.svg */; };
-		4DE6897C1C4AEC3D003AE3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6897B1C4AEC3D003AE3C7 /* AppDelegate.swift */; };
-		4DE6897E1C4AEC3D003AE3C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6897D1C4AEC3D003AE3C7 /* ViewController.swift */; };
-		4DE689811C4AEC3D003AE3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE6897F1C4AEC3D003AE3C7 /* Main.storyboard */; };
-		4DE689841C4AEC3D003AE3C7 /* WiBlaze.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DE689821C4AEC3D003AE3C7 /* WiBlaze.xcdatamodeld */; };
-		4DE689861C4AEC3E003AE3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE689851C4AEC3E003AE3C7 /* Assets.xcassets */; };
-		4DE689891C4AEC3E003AE3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE689871C4AEC3E003AE3C7 /* LaunchScreen.storyboard */; };
-		4DE689951C4B10B2003AE3C7 /* NSURL+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE689931C4B10B2003AE3C7 /* NSURL+Preview.swift */; };
-		4DE689961C4B10B2003AE3C7 /* NSURL-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE689941C4B10B2003AE3C7 /* NSURL-Extensions.swift */; };
-		4DE689991C4B3153003AE3C7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE689981C4B3153003AE3C7 /* WelcomeViewController.swift */; };
-		4DE6899B1C4B31AB003AE3C7 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6899A1C4B31AB003AE3C7 /* UIViewExtensions.swift */; };
+		4DFDB8BA1C53B65A00B3703F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFDB8B91C53B65A00B3703F /* AppDelegate.swift */; };
+		4DFDB8BC1C53B65A00B3703F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFDB8BB1C53B65A00B3703F /* ViewController.swift */; };
+		4DFDB8BF1C53B65A00B3703F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDB8BD1C53B65A00B3703F /* Main.storyboard */; };
+		4DFDB8C11C53B65A00B3703F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDB8C01C53B65A00B3703F /* Assets.xcassets */; };
+		4DFDB8C41C53B65A00B3703F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDB8C21C53B65A00B3703F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D2730A21C4C20A2000AA1B4 /* LoaderPad.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LoaderPad.html; sourceTree = "<group>"; };
-		4D2730A31C4C20A2000AA1B4 /* LoaderPad.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LoaderPad.svg; sourceTree = "<group>"; };
-		4D2730A61C4C221C000AA1B4 /* LoaderPhone.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LoaderPhone.html; sourceTree = "<group>"; };
-		4D2730A71C4C221C000AA1B4 /* LoaderPhone.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LoaderPhone.svg; sourceTree = "<group>"; };
-		4DE689781C4AEC3D003AE3C7 /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DE6897B1C4AEC3D003AE3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DE6897D1C4AEC3D003AE3C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4DE689801C4AEC3D003AE3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4DE689831C4AEC3D003AE3C7 /* WiBlaze.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WiBlaze.xcdatamodel; sourceTree = "<group>"; };
-		4DE689851C4AEC3E003AE3C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4DE689881C4AEC3E003AE3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4DE6898A1C4AEC3E003AE3C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DE689931C4B10B2003AE3C7 /* NSURL+Preview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+Preview.swift"; sourceTree = "<group>"; };
-		4DE689941C4B10B2003AE3C7 /* NSURL-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL-Extensions.swift"; sourceTree = "<group>"; };
-		4DE689981C4B3153003AE3C7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		4DE6899A1C4B31AB003AE3C7 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		4DFDB8B61C53B65A00B3703F /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DFDB8B91C53B65A00B3703F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4DFDB8BB1C53B65A00B3703F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DFDB8BE1C53B65A00B3703F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DFDB8C01C53B65A00B3703F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DFDB8C31C53B65A00B3703F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4DFDB8C51C53B65A00B3703F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4DE689751C4AEC3D003AE3C7 /* Frameworks */ = {
+		4DFDB8B31C53B65A00B3703F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,78 +35,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D2730A11C4C20A2000AA1B4 /* Loader */ = {
+		4DFDB8AD1C53B65A00B3703F = {
 			isa = PBXGroup;
 			children = (
-				4D2730A21C4C20A2000AA1B4 /* LoaderPad.html */,
-				4D2730A31C4C20A2000AA1B4 /* LoaderPad.svg */,
-				4D2730A61C4C221C000AA1B4 /* LoaderPhone.html */,
-				4D2730A71C4C221C000AA1B4 /* LoaderPhone.svg */,
-			);
-			path = Loader;
-			sourceTree = "<group>";
-		};
-		4DE6896F1C4AEC3D003AE3C7 = {
-			isa = PBXGroup;
-			children = (
-				4DE6897A1C4AEC3D003AE3C7 /* WiBlaze */,
-				4DE689791C4AEC3D003AE3C7 /* Products */,
+				4DFDB8B81C53B65A00B3703F /* WiBlaze */,
+				4DFDB8B71C53B65A00B3703F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4DE689791C4AEC3D003AE3C7 /* Products */ = {
+		4DFDB8B71C53B65A00B3703F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DE689781C4AEC3D003AE3C7 /* WiBlaze.app */,
+				4DFDB8B61C53B65A00B3703F /* WiBlaze.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DE6897A1C4AEC3D003AE3C7 /* WiBlaze */ = {
+		4DFDB8B81C53B65A00B3703F /* WiBlaze */ = {
 			isa = PBXGroup;
 			children = (
-				4DE6897B1C4AEC3D003AE3C7 /* AppDelegate.swift */,
-				4DE6897D1C4AEC3D003AE3C7 /* ViewController.swift */,
-				4DE6897F1C4AEC3D003AE3C7 /* Main.storyboard */,
-				4DE689851C4AEC3E003AE3C7 /* Assets.xcassets */,
-				4DE689871C4AEC3E003AE3C7 /* LaunchScreen.storyboard */,
-				4DE6898A1C4AEC3E003AE3C7 /* Info.plist */,
-				4DE689821C4AEC3D003AE3C7 /* WiBlaze.xcdatamodeld */,
-				4DE689971C4B313C003AE3C7 /* Welcome */,
-				4DE689921C4B10B2003AE3C7 /* Supporting Files */,
+				4DFDB8B91C53B65A00B3703F /* AppDelegate.swift */,
+				4DFDB8BB1C53B65A00B3703F /* ViewController.swift */,
+				4DFDB8BD1C53B65A00B3703F /* Main.storyboard */,
+				4DFDB8C01C53B65A00B3703F /* Assets.xcassets */,
+				4DFDB8C21C53B65A00B3703F /* LaunchScreen.storyboard */,
+				4DFDB8C51C53B65A00B3703F /* Info.plist */,
 			);
 			path = WiBlaze;
-			sourceTree = "<group>";
-		};
-		4DE689921C4B10B2003AE3C7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4D2730A11C4C20A2000AA1B4 /* Loader */,
-				4DE6899A1C4B31AB003AE3C7 /* UIViewExtensions.swift */,
-				4DE689931C4B10B2003AE3C7 /* NSURL+Preview.swift */,
-				4DE689941C4B10B2003AE3C7 /* NSURL-Extensions.swift */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4DE689971C4B313C003AE3C7 /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				4DE689981C4B3153003AE3C7 /* WelcomeViewController.swift */,
-			);
-			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4DE689771C4AEC3D003AE3C7 /* WiBlaze */ = {
+		4DFDB8B51C53B65A00B3703F /* WiBlaze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DE6898D1C4AEC3E003AE3C7 /* Build configuration list for PBXNativeTarget "WiBlaze" */;
+			buildConfigurationList = 4DFDB8C81C53B65A00B3703F /* Build configuration list for PBXNativeTarget "WiBlaze" */;
 			buildPhases = (
-				4DE689741C4AEC3D003AE3C7 /* Sources */,
-				4DE689751C4AEC3D003AE3C7 /* Frameworks */,
-				4DE689761C4AEC3D003AE3C7 /* Resources */,
+				4DFDB8B21C53B65A00B3703F /* Sources */,
+				4DFDB8B31C53B65A00B3703F /* Frameworks */,
+				4DFDB8B41C53B65A00B3703F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -132,26 +81,26 @@
 			);
 			name = WiBlaze;
 			productName = WiBlaze;
-			productReference = 4DE689781C4AEC3D003AE3C7 /* WiBlaze.app */;
+			productReference = 4DFDB8B61C53B65A00B3703F /* WiBlaze.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4DE689701C4AEC3D003AE3C7 /* Project object */ = {
+		4DFDB8AE1C53B65A00B3703F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Justin Bush";
 				TargetAttributes = {
-					4DE689771C4AEC3D003AE3C7 = {
+					4DFDB8B51C53B65A00B3703F = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 85N3S3DG8M;
 					};
 				};
 			};
-			buildConfigurationList = 4DE689731C4AEC3D003AE3C7 /* Build configuration list for PBXProject "WiBlaze" */;
+			buildConfigurationList = 4DFDB8B11C53B65A00B3703F /* Build configuration list for PBXProject "WiBlaze" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -159,63 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 4DE6896F1C4AEC3D003AE3C7;
-			productRefGroup = 4DE689791C4AEC3D003AE3C7 /* Products */;
+			mainGroup = 4DFDB8AD1C53B65A00B3703F;
+			productRefGroup = 4DFDB8B71C53B65A00B3703F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DE689771C4AEC3D003AE3C7 /* WiBlaze */,
+				4DFDB8B51C53B65A00B3703F /* WiBlaze */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4DE689761C4AEC3D003AE3C7 /* Resources */ = {
+		4DFDB8B41C53B65A00B3703F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DE689891C4AEC3E003AE3C7 /* LaunchScreen.storyboard in Resources */,
-				4D2730A51C4C20A2000AA1B4 /* LoaderPad.svg in Resources */,
-				4D2730A81C4C221C000AA1B4 /* LoaderPhone.html in Resources */,
-				4D2730A91C4C221C000AA1B4 /* LoaderPhone.svg in Resources */,
-				4D2730A41C4C20A2000AA1B4 /* LoaderPad.html in Resources */,
-				4DE689861C4AEC3E003AE3C7 /* Assets.xcassets in Resources */,
-				4DE689811C4AEC3D003AE3C7 /* Main.storyboard in Resources */,
+				4DFDB8C41C53B65A00B3703F /* LaunchScreen.storyboard in Resources */,
+				4DFDB8C11C53B65A00B3703F /* Assets.xcassets in Resources */,
+				4DFDB8BF1C53B65A00B3703F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4DE689741C4AEC3D003AE3C7 /* Sources */ = {
+		4DFDB8B21C53B65A00B3703F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DE689841C4AEC3D003AE3C7 /* WiBlaze.xcdatamodeld in Sources */,
-				4DE6899B1C4B31AB003AE3C7 /* UIViewExtensions.swift in Sources */,
-				4DE6897E1C4AEC3D003AE3C7 /* ViewController.swift in Sources */,
-				4DE6897C1C4AEC3D003AE3C7 /* AppDelegate.swift in Sources */,
-				4DE689991C4B3153003AE3C7 /* WelcomeViewController.swift in Sources */,
-				4DE689961C4B10B2003AE3C7 /* NSURL-Extensions.swift in Sources */,
-				4DE689951C4B10B2003AE3C7 /* NSURL+Preview.swift in Sources */,
+				4DFDB8BC1C53B65A00B3703F /* ViewController.swift in Sources */,
+				4DFDB8BA1C53B65A00B3703F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4DE6897F1C4AEC3D003AE3C7 /* Main.storyboard */ = {
+		4DFDB8BD1C53B65A00B3703F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4DE689801C4AEC3D003AE3C7 /* Base */,
+				4DFDB8BE1C53B65A00B3703F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4DE689871C4AEC3E003AE3C7 /* LaunchScreen.storyboard */ = {
+		4DFDB8C21C53B65A00B3703F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4DE689881C4AEC3E003AE3C7 /* Base */,
+				4DFDB8C31C53B65A00B3703F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -223,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4DE6898B1C4AEC3E003AE3C7 /* Debug */ = {
+		4DFDB8C61C53B65A00B3703F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		4DE6898C1C4AEC3E003AE3C7 /* Release */ = {
+		4DFDB8C71C53B65A00B3703F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -306,26 +246,24 @@
 			};
 			name = Release;
 		};
-		4DE6898E1C4AEC3E003AE3C7 /* Debug */ = {
+		4DFDB8C91C53B65A00B3703F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WiBlaze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revblaze.WiBlaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		4DE6898F1C4AEC3E003AE3C7 /* Release */ = {
+		4DFDB8CA1C53B65A00B3703F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WiBlaze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revblaze.WiBlaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -335,38 +273,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4DE689731C4AEC3D003AE3C7 /* Build configuration list for PBXProject "WiBlaze" */ = {
+		4DFDB8B11C53B65A00B3703F /* Build configuration list for PBXProject "WiBlaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DE6898B1C4AEC3E003AE3C7 /* Debug */,
-				4DE6898C1C4AEC3E003AE3C7 /* Release */,
+				4DFDB8C61C53B65A00B3703F /* Debug */,
+				4DFDB8C71C53B65A00B3703F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DE6898D1C4AEC3E003AE3C7 /* Build configuration list for PBXNativeTarget "WiBlaze" */ = {
+		4DFDB8C81C53B65A00B3703F /* Build configuration list for PBXNativeTarget "WiBlaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DE6898E1C4AEC3E003AE3C7 /* Debug */,
-				4DE6898F1C4AEC3E003AE3C7 /* Release */,
+				4DFDB8C91C53B65A00B3703F /* Debug */,
+				4DFDB8CA1C53B65A00B3703F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4DE689821C4AEC3D003AE3C7 /* WiBlaze.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4DE689831C4AEC3D003AE3C7 /* WiBlaze.xcdatamodel */,
-			);
-			currentVersion = 4DE689831C4AEC3D003AE3C7 /* WiBlaze.xcdatamodel */;
-			path = WiBlaze.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 4DE689701C4AEC3D003AE3C7 /* Project object */;
+	rootObject = 4DFDB8AE1C53B65A00B3703F /* Project object */;
 }

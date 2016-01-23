@@ -38,9 +38,11 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
         self.forwardButton.enabled = false
         
         // Load previously saved URL
-        let url = NSUserDefaults.standardUserDefaults().objectForKey("savedURL")!
-        let request = NSURL(string: url as! String)!
-        webView.loadRequest(NSURLRequest(URL: request))
+        if NSUserDefaults.standardUserDefaults().objectForKey("savedURL") != nil {
+            let url = NSUserDefaults.standardUserDefaults().objectForKey("savedURL")!
+            let request = NSURL(string: url as! String)!
+            webView.loadRequest(NSURLRequest(URL: request))
+        }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("appDidEnterBackground:"), name:UIApplicationDidEnterBackgroundNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("appDidEnterBackground:"), name:UIApplicationWillResignActiveNotification, object: nil)
@@ -158,9 +160,7 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
     }
     
     @IBAction func refresh(sender: AnyObject) {
-        if (self.webView.canGoForward) {
             self.webView.reload()
-        }
     }
     
     @IBAction func forward(sender: AnyObject) {

@@ -14,6 +14,11 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
     
     var webView: WKWebView!
     @IBOutlet var textField: UITextField!
+    @IBOutlet var backButton: UIBarButtonItem!
+    @IBOutlet var bookmarksButton: UIBarButtonItem!
+    @IBOutlet var menuButton: UIBarButtonItem!
+    @IBOutlet var refreshButton: UIBarButtonItem!
+    @IBOutlet var forwardButton: UIBarButtonItem!
     
     override func loadView() {
         webView = WKWebView()
@@ -27,6 +32,12 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         textField.delegate = self
+        
+        self.backButton.enabled = false
+        self.refreshButton.enabled = false
+        self.forwardButton.enabled = false
+        
+        // Load previously saved URL
         let url = NSUserDefaults.standardUserDefaults().objectForKey("savedURL")!
         let request = NSURL(string: url as! String)!
         webView.loadRequest(NSURLRequest(URL: request))
@@ -118,12 +129,55 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
         // Check if request contains https://
         if (textField.text!.lowercaseString.rangeOfString("https://") != nil) {
             print("String is secure https")
-            self.textField.textColor = UIColor(red:0.0, green:0.75, blue:0.02, alpha:1.0)//UIColor(red:0.18, green:0.8, blue:0.44, alpha:1.0)
+            self.textField.textColor = UIColor(red:0.0, green:0.75, blue:0.02, alpha:1.0)
         }
         
         else {
             self.textField.textColor = self.view.tintColor
         }
+        
+        self.refreshButton.enabled = true
+        
+        if (self.webView.canGoBack) {
+            self.backButton.enabled = true
+        } else {
+            self.backButton.enabled = false
+        }
+        
+        if (self.webView.canGoForward) {
+            self.forwardButton.enabled = true
+        } else {
+            self.forwardButton.enabled = false
+        }
+    }
+    
+    @IBAction func back(sender: AnyObject) {
+        if (self.webView.canGoBack) {
+            self.webView.goBack()
+        }
+    }
+    
+    @IBAction func refresh(sender: AnyObject) {
+        if (self.webView.canGoForward) {
+            self.webView.reload()
+        }
+    }
+    
+    @IBAction func forward(sender: AnyObject) {
+        if (self.webView.canGoForward) {
+            self.webView.goForward()
+        }
+    }
+    
+    @IBAction func menu(sender: AnyObject) {
+        let kInfoTitle = "Menu"
+        let kSubtitle = textField.text!
+        let menu = SCLAlertView()
+        menu.addButton("Share", target:self, selector:Selector("firstButton"))
+        menu.addButton("Set as Homepage", target:self, selector:Selector("firstButton"))
+        menu.addButton("Add to Favourites", target:self, selector:Selector("firstButton"))
+        menu.addButton("Settings", target:self, selector:Selector("firstButton"))
+        menu.showEdit(kInfoTitle, subTitle: kSubtitle)
     }
     
     // Save URL for next app load
@@ -132,4 +186,5 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
         NSUserDefaults.standardUserDefaults().setObject(url, forKey: "savedURL")
         NSUserDefaults.standardUserDefaults().synchronize()
     }
+    
 }

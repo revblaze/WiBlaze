@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3A61D91C53E46500BF5027 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A61D81C53E46500BF5027 /* SCLAlertView.swift */; };
 		4DFDB8BA1C53B65A00B3703F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFDB8B91C53B65A00B3703F /* AppDelegate.swift */; };
 		4DFDB8BC1C53B65A00B3703F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFDB8BB1C53B65A00B3703F /* ViewController.swift */; };
 		4DFDB8BF1C53B65A00B3703F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDB8BD1C53B65A00B3703F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D3A61D81C53E46500BF5027 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		4DFDB8B61C53B65A00B3703F /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFDB8B91C53B65A00B3703F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DFDB8BB1C53B65A00B3703F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D3A61D71C53E46500BF5027 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A61D81C53E46500BF5027 /* SCLAlertView.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
 		4DFDB8AD1C53B65A00B3703F = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 				4DFDB8C01C53B65A00B3703F /* Assets.xcassets */,
 				4DFDB8C21C53B65A00B3703F /* LaunchScreen.storyboard */,
 				4DFDB8C51C53B65A00B3703F /* Info.plist */,
+				4D3A61D71C53E46500BF5027 /* Libraries */,
 			);
 			path = WiBlaze;
 			sourceTree = "<group>";
@@ -137,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFDB8BC1C53B65A00B3703F /* ViewController.swift in Sources */,
+				4D3A61D91C53E46500BF5027 /* SCLAlertView.swift in Sources */,
 				4DFDB8BA1C53B65A00B3703F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +301,7 @@
 				4DFDB8CA1C53B65A00B3703F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

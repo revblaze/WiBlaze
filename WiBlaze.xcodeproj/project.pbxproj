@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0722091C540CC10013488A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0722081C540CC10013488A /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4D3A61D91C53E46500BF5027 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A61D81C53E46500BF5027 /* SCLAlertView.swift */; };
+		4D9D55C41C54194600CCED2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D55C31C54194600CCED2E /* SettingsViewController.swift */; };
 		4DFDB8BA1C53B65A00B3703F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFDB8B91C53B65A00B3703F /* AppDelegate.swift */; };
 		4DFDB8BC1C53B65A00B3703F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFDB8BB1C53B65A00B3703F /* ViewController.swift */; };
 		4DFDB8BF1C53B65A00B3703F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DFDB8BD1C53B65A00B3703F /* Main.storyboard */; };
@@ -16,7 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0722081C540CC10013488A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4D0722181C540F530013488A /* WiBlaze-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WiBlaze-Bridging-Header.h"; sourceTree = "<group>"; };
 		4D3A61D81C53E46500BF5027 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		4D9D55C31C54194600CCED2E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4DFDB8B61C53B65A00B3703F /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DFDB8B91C53B65A00B3703F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DFDB8BB1C53B65A00B3703F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,16 +36,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0722091C540CC10013488A /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0722171C540EFB0013488A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4D0722181C540F530013488A /* WiBlaze-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4D3A61D71C53E46500BF5027 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
 				4D3A61D81C53E46500BF5027 /* SCLAlertView.swift */,
+				4D0722081C540CC10013488A /* WebKit.framework */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -66,11 +81,13 @@
 			children = (
 				4DFDB8B91C53B65A00B3703F /* AppDelegate.swift */,
 				4DFDB8BB1C53B65A00B3703F /* ViewController.swift */,
+				4D9D55C31C54194600CCED2E /* SettingsViewController.swift */,
 				4DFDB8BD1C53B65A00B3703F /* Main.storyboard */,
 				4DFDB8C01C53B65A00B3703F /* Assets.xcassets */,
 				4DFDB8C21C53B65A00B3703F /* LaunchScreen.storyboard */,
 				4DFDB8C51C53B65A00B3703F /* Info.plist */,
 				4D3A61D71C53E46500BF5027 /* Libraries */,
+				4D0722171C540EFB0013488A /* Supporting Files */,
 			);
 			path = WiBlaze;
 			sourceTree = "<group>";
@@ -118,6 +135,15 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				fr,
+				it,
+				ja,
+				ko,
+				pt,
+				ru,
+				"zh-Hans",
 			);
 			mainGroup = 4DFDB8AD1C53B65A00B3703F;
 			productRefGroup = 4DFDB8B71C53B65A00B3703F /* Products */;
@@ -150,6 +176,7 @@
 				4DFDB8BC1C53B65A00B3703F /* ViewController.swift in Sources */,
 				4D3A61D91C53E46500BF5027 /* SCLAlertView.swift in Sources */,
 				4DFDB8BA1C53B65A00B3703F /* AppDelegate.swift in Sources */,
+				4D9D55C41C54194600CCED2E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,11 +289,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WiBlaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revblaze.WiBlaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WiBlaze/Supporting Files/WiBlaze-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -274,11 +306,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WiBlaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.revblaze.WiBlaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WiBlaze/Supporting Files/WiBlaze-Bridging-Header.h";
 			};
 			name = Release;
 		};

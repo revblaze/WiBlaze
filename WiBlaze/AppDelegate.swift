@@ -12,6 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var viewController: ViewController!
+    // let fillr = Fillr()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -22,6 +24,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         lagFreeField.becomeFirstResponder()
         lagFreeField.resignFirstResponder()
         lagFreeField.removeFromSuperview()
+        
+        /*
+        fillr.initialiseWithDevKey("a4b7e6fe8571a257dcfe540a91147a11", andUrlSchema: "com.revblaze.WiBlaze")
+        fillr.trackWebview(viewController.webView)
+        fillr.setEnabled(true)
+        */
+        
+        return true
+    }
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        /*
+        if fillr.canHandleOpenURL(url) {
+            fillr.handleOpenURL(url)
+            return true
+        }
+        */
+        
         return true
     }
 

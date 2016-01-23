@@ -43,10 +43,6 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
             let request = NSURL(string: url as! String)!
             webView.loadRequest(NSURLRequest(URL: request))
         }
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("appDidEnterBackground:"), name:UIApplicationDidEnterBackgroundNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("appDidEnterBackground:"), name:UIApplicationWillResignActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("appDidEnterBackground:"), name:UIApplicationWillTerminateNotification, object: nil)
 
         webView.allowsBackForwardNavigationGestures = true
         
@@ -128,6 +124,11 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
         // Reflect loaded URL in textField
         textField.text = webView.URL?.absoluteString as String!
         
+        // Save URL for if application quits or crashes
+        let url = textField.text!
+        NSUserDefaults.standardUserDefaults().setObject(url, forKey: "savedURL")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
         // Check if request contains https://
         if (textField.text!.lowercaseString.rangeOfString("https://") != nil) {
             print("String is secure https")
@@ -179,12 +180,4 @@ class ViewController: UIViewController, WKNavigationDelegate, UITextFieldDelegat
         menu.addButton("Settings", target:self, selector:Selector("firstButton"))
         menu.showEdit(kInfoTitle, subTitle: kSubtitle)
     }
-    
-    // Save URL for next app load
-    func appDidEnterBackground(notification : NSNotification) {
-        let url = textField.text!
-        NSUserDefaults.standardUserDefaults().setObject(url, forKey: "savedURL")
-        NSUserDefaults.standardUserDefaults().synchronize()
-    }
-    
 }

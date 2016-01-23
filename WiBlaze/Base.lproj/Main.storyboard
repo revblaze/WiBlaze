@@ -19,7 +19,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oW3-7b-k55"/>
                         <barButtonItem image="Back" id="dth-nR-5Tp">
                             <connections>
                                 <action selector="back:" destination="BYZ-38-t0r" id="A05-0f-muh"/>
@@ -49,7 +48,6 @@
                                 <action selector="forward:" destination="BYZ-38-t0r" id="Ob6-uT-03P"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="1E5-UV-0uj"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="NsI-XH-Ehp">
                         <nil key="title"/>

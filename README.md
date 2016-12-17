@@ -39,7 +39,7 @@ Requires iOS 8.0 or later.
 
 ## MIT License
 
-Copyright © 2016 Justin Bush. All rights reserved.
+Copyright © 2017 Justin Bush. All rights reserved.
 
 ```
 Permission is hereby granted, free of charge, to any person obtaining a copy

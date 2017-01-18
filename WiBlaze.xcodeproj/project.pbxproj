@@ -356,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E21E10FD0B239091B88D33DA /* Pods-WiBlaze.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 85N3S3DG8M;
 				INFOPLIST_FILE = WiBlaze/Info.plist;
@@ -371,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE49E69144CB04A9545B95A0 /* Pods-WiBlaze.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 85N3S3DG8M;
 				INFOPLIST_FILE = WiBlaze/Info.plist;

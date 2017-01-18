@@ -46,7 +46,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         addressBar.attributedPlaceholder = NSAttributedString(string:" Search or type URL", attributes: [NSForegroundColorAttributeName: UIColor.gray])
         
         // Set WebKit Load Configurations
-        loadURL(address: "http://google.ca")
+        let webURL = URL(string: "https://google.ca")
+        let webRequest = URLRequest(url: webURL!)
+        webView.load(webRequest)
         webView.allowsBackForwardNavigationGestures = true
         
         // Setup Menu Controller
@@ -140,6 +142,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     
     // WebView Finished Loading
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        addressBar.text = webView.url?.absoluteString
         activityNavigationBar?.reset()
     }
     

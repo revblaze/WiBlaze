@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D7E0B161E2D290E00A12896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0B151E2D290E00A12896 /* AppDelegate.swift */; };
+		4D7E0B181E2D290E00A12896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0B171E2D290E00A12896 /* ViewController.swift */; };
+		4D7E0B1B1E2D290E00A12896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B191E2D290E00A12896 /* Main.storyboard */; };
+		4D7E0B1D1E2D290E00A12896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B1C1E2D290E00A12896 /* Assets.xcassets */; };
+		4D7E0B201E2D290E00A12896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B1E1E2D290E00A12896 /* LaunchScreen.storyboard */; };
+		4D7E0B291E2D2DBE00A12896 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */; };
+		4D7E0B2B1E2D3A6100A12896 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */; };
+		4DDB9BDE1E2D541D00F6D617 /* SideMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */; };
+		957E4906FD5E705BE5113D71 /* Pods_WiBlaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiBlaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7E0B121E2D290E00A12896 /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D7E0B151E2D290E00A12896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D7E0B171E2D290E00A12896 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D7E0B1A1E2D290E00A12896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D7E0B1C1E2D290E00A12896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D7E0B1F1E2D290E00A12896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D7E0B211E2D290E00A12896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableView.swift; sourceTree = "<group>"; };
+		CE49E69144CB04A9545B95A0 /* Pods-WiBlaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiBlaze.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze.release.xcconfig"; sourceTree = "<group>"; };
+		E21E10FD0B239091B88D33DA /* Pods-WiBlaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiBlaze.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D7E0B0F1E2D290D00A12896 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				957E4906FD5E705BE5113D71 /* Pods_WiBlaze.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D7E0B091E2D290D00A12896 = {
+			isa = PBXGroup;
+			children = (
+				4D7E0B141E2D290E00A12896 /* WiBlaze */,
+				4D7E0B131E2D290E00A12896 /* Products */,
+				E0BEEFBFFED1C48E680B061F /* Pods */,
+				753EB1025AE1337143CA06AB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D7E0B131E2D290E00A12896 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D7E0B121E2D290E00A12896 /* WiBlaze.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D7E0B141E2D290E00A12896 /* WiBlaze */ = {
+			isa = PBXGroup;
+			children = (
+				4D7E0B151E2D290E00A12896 /* AppDelegate.swift */,
+				4D7E0B171E2D290E00A12896 /* ViewController.swift */,
+				4D7E0B191E2D290E00A12896 /* Main.storyboard */,
+				4D7E0B1C1E2D290E00A12896 /* Assets.xcassets */,
+				4D7E0B1E1E2D290E00A12896 /* LaunchScreen.storyboard */,
+				4D7E0B211E2D290E00A12896 /* Info.plist */,
+				4D7E0B271E2D2CDD00A12896 /* Resources */,
+			);
+			path = WiBlaze;
+			sourceTree = "<group>";
+		};
+		4D7E0B271E2D2CDD00A12896 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */,
+				4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */,
+				4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		753EB1025AE1337143CA06AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0BEEFBFFED1C48E680B061F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E21E10FD0B239091B88D33DA /* Pods-WiBlaze.debug.xcconfig */,
+				CE49E69144CB04A9545B95A0 /* Pods-WiBlaze.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D7E0B111E2D290D00A12896 /* WiBlaze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D7E0B241E2D290E00A12896 /* Build configuration list for PBXNativeTarget "WiBlaze" */;
+			buildPhases = (
+				1AB1790B6CCA7359EB1F50D2 /* [CP] Check Pods Manifest.lock */,
+				4D7E0B0E1E2D290D00A12896 /* Sources */,
+				4D7E0B0F1E2D290D00A12896 /* Frameworks */,
+				4D7E0B101E2D290D00A12896 /* Resources */,
+				15624A78AAA0EC0CF67DBC87 /* [CP] Embed Pods Frameworks */,
+				738923070248685FEB847725 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiBlaze;
+			productName = WiBlaze;
+			productReference = 4D7E0B121E2D290E00A12896 /* WiBlaze.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D7E0B0A1E2D290D00A12896 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Justin Bush";
+				TargetAttributes = {
+					4D7E0B111E2D290D00A12896 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 85N3S3DG8M;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4D7E0B0D1E2D290D00A12896 /* Build configuration list for PBXProject "WiBlaze" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D7E0B091E2D290D00A12896;
+			productRefGroup = 4D7E0B131E2D290E00A12896 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D7E0B111E2D290D00A12896 /* WiBlaze */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D7E0B101E2D290D00A12896 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7E0B201E2D290E00A12896 /* LaunchScreen.storyboard in Resources */,
+				4D7E0B1D1E2D290E00A12896 /* Assets.xcassets in Resources */,
+				4D7E0B2B1E2D3A6100A12896 /* GoogleService-Info.plist in Resources */,
+				4D7E0B291E2D2DBE00A12896 /* Roboto-Regular.ttf in Resources */,
+				4D7E0B1B1E2D290E00A12896 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15624A78AAA0EC0CF67DBC87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1AB1790B6CCA7359EB1F50D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		738923070248685FEB847725 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D7E0B0E1E2D290D00A12896 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D7E0B181E2D290E00A12896 /* ViewController.swift in Sources */,
+				4D7E0B161E2D290E00A12896 /* AppDelegate.swift in Sources */,
+				4DDB9BDE1E2D541D00F6D617 /* SideMenuTableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D7E0B191E2D290E00A12896 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D7E0B1A1E2D290E00A12896 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D7E0B1E1E2D290E00A12896 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D7E0B1F1E2D290E00A12896 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D7E0B221E2D290E00A12896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D7E0B231E2D290E00A12896 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D7E0B251E2D290E00A12896 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21E10FD0B239091B88D33DA /* Pods-WiBlaze.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 85N3S3DG8M;
+				INFOPLIST_FILE = WiBlaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.revblaze.WiBlaze-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4D7E0B261E2D290E00A12896 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE49E69144CB04A9545B95A0 /* Pods-WiBlaze.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 85N3S3DG8M;
+				INFOPLIST_FILE = WiBlaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.revblaze.WiBlaze-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D7E0B0D1E2D290D00A12896 /* Build configuration list for PBXProject "WiBlaze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7E0B221E2D290E00A12896 /* Debug */,
+				4D7E0B231E2D290E00A12896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D7E0B241E2D290E00A12896 /* Build configuration list for PBXNativeTarget "WiBlaze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7E0B251E2D290E00A12896 /* Debug */,
+				4D7E0B261E2D290E00A12896 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D7E0B0A1E2D290D00A12896 /* Project object */;
+}

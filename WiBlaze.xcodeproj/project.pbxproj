@@ -14,6 +14,7 @@
 		4D7E0B201E2D290E00A12896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B1E1E2D290E00A12896 /* LaunchScreen.storyboard */; };
 		4D7E0B291E2D2DBE00A12896 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */; };
 		4D7E0B2B1E2D3A6100A12896 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */; };
+		4DA824FE1E3012AD00113BB8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA824FD1E3012AD00113BB8 /* SettingsViewController.swift */; };
 		4DDB9BDE1E2D541D00F6D617 /* SideMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */; };
 		957E4906FD5E705BE5113D71 /* Pods_WiBlaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		4D7E0B211E2D290E00A12896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DA824FD1E3012AD00113BB8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableView.swift; sourceTree = "<group>"; };
 		CE49E69144CB04A9545B95A0 /* Pods-WiBlaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiBlaze.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze.release.xcconfig"; sourceTree = "<group>"; };
 		E21E10FD0B239091B88D33DA /* Pods-WiBlaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiBlaze.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				4D7E0B151E2D290E00A12896 /* AppDelegate.swift */,
 				4D7E0B171E2D290E00A12896 /* ViewController.swift */,
+				4DA824FD1E3012AD00113BB8 /* SettingsViewController.swift */,
 				4D7E0B191E2D290E00A12896 /* Main.storyboard */,
 				4D7E0B1C1E2D290E00A12896 /* Assets.xcassets */,
 				4D7E0B1E1E2D290E00A12896 /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 				4D7E0B181E2D290E00A12896 /* ViewController.swift in Sources */,
 				4D7E0B161E2D290E00A12896 /* AppDelegate.swift in Sources */,
 				4DDB9BDE1E2D541D00F6D617 /* SideMenuTableView.swift in Sources */,
+				4DA824FE1E3012AD00113BB8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

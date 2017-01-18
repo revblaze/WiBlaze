@@ -15,8 +15,8 @@ The WiBlaze web browser was built from the ground up for durability, and above a
 - [ ] UI Foundation
     - [x] URLSearchBar
     - [x] <s>UIWebView</s> WKWebView
-    - [ ] Back & Forward
-    - [ ] Stop & Refresh
+    - [x] Back & Forward
+    - [x] Stop & Refresh
     - [ ] Add to Bookmarks
     - [ ] Show Bookmarks
 - [x] URLSearchBar
@@ -34,8 +34,8 @@ None as of yet.
 None as of yet.
 
 ## Requirements
-Requires iOS 8.0 or later.
-<i>Please note that the app is being built for iOS 9.</i>
+Requires iOS 9.0 or later.
+<i>Please note that the app is being built with Swift 3.</i>
 
 ## MIT License
 

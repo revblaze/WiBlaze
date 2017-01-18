@@ -15,7 +15,7 @@ protocol MainViewControllerDelegate {
     func refresh()
 }
 
-class ViewController: UIViewController, UINavigationControllerDelegate, WKNavigationDelegate, MainViewControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate, WKNavigationDelegate, UITextFieldDelegate, MainViewControllerDelegate {
 
     var webView: WKWebView!
     
@@ -40,13 +40,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addressBar.delegate = self
+        
         // Set Placeholder Style
         addressBar.attributedPlaceholder = NSAttributedString(string:" Search or type URL", attributes: [NSForegroundColorAttributeName: UIColor.gray])
         
         // Set WebKit Load Configurations
-        let webURL = URL(string: "https://google.ca")
-        let webRequest = URLRequest(url: webURL!)
-        webView.load(webRequest)
+        loadURL(address: "http://google.ca")
         webView.allowsBackForwardNavigationGestures = true
         
         // Setup Menu Controller
@@ -59,6 +59,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         SideMenuManager.menuWidth = max(round(min((appScreenRect.width), (appScreenRect.height)) * 0.65), 240)
     }
     
+    // Setup Address Bar
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        addressBar.resignFirstResponder()
+        print("User Requested:", addressBar.text!)
+        loadURL(address: addressBar.text!)
+        return true
+    }
+
     // Toggle Back Button
     func checkBack() {
         if webView.canGoBack {
@@ -66,6 +74,52 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         } else {
             backButton.isEnabled = false
         }
+    }
+    
+    // Validate URL
+    func validateURL(urlString: String) -> Bool {
+        let urlRegEx = "((?:http|https)://)?(?:www\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
+        return NSPredicate(format: "SELF MATCHES %@", urlRegEx).evaluate(with: urlString)
+    }
+    
+    // Format URL Scheme
+    func formatURL(userRequest: String) -> String {
+        
+        var formattedURL: String
+        
+        // Check if userRequest only contains URL prefixes
+        let prefixes = ["http://", "https://", "www.", "http://www.", "https://www."]
+        
+        if validateURL(urlString: userRequest) {
+            // userRequest is a valid URL
+            if prefixes.contains(userRequest) {
+                // URL does have prefix
+                formattedURL = userRequest
+            } else {
+                // Format URL and add prefix
+                formattedURL = "http://" + userRequest
+            }
+            
+            print("Load URL:", formattedURL)
+            return formattedURL
+            
+        } else {
+            
+            // userRequest is not a valid URL, load search query
+            let searchQuery = userRequest.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+            let searchEngine = "https://google.com/#q="
+            let searchURL = searchEngine + searchQuery
+            print("Load Search:", searchURL)
+            return searchURL
+        }
+    }
+    
+    // Load URL in the WebView
+    func loadURL(address: String) {
+        let address = formatURL(userRequest: address)
+        let webURL = URL(string: address)
+        let webRequest = URLRequest(url: webURL!)
+        webView.load(webRequest)
     }
     
     // WebView Called for Navigation
@@ -99,10 +153,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         return UIStatusBarStyle.lightContent
     }
     
+    // Go Back to Previous WebPage
     @IBAction func goBack(sender: AnyObject) {
         webView.goBack()
     }
     
+    // Refresh WebView Content
     func refresh() {
         webView.reload()
         print("Refresh Page")

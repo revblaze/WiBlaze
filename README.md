@@ -1,4 +1,4 @@
-<img src="Cover.png" width="860" />
+<img src="WiBlaze.png" width="860" />
 
 <b>WiBlaze</b> is an open source web browser for the iOS and OS X platforms.
 

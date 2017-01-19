@@ -17,8 +17,10 @@ protocol MainViewControllerDelegate {
 
 class ViewController: UIViewController, UINavigationControllerDelegate, WKNavigationDelegate, UITextFieldDelegate, MainViewControllerDelegate {
 
-    var webView: WKWebView!
+    let defaults = UserDefaults.standard
     
+    var webView: WKWebView!
+
     @IBOutlet var addressBar: UITextField!
     @IBOutlet var backButton: UIBarButtonItem!
     
@@ -41,14 +43,38 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         super.viewDidLoad()
         
         addressBar.delegate = self
+        var homepageURL: String!
         
         // Set Placeholder Style
         addressBar.attributedPlaceholder = NSAttributedString(string:" Search or type URL", attributes: [NSForegroundColorAttributeName: UIColor.gray])
         
+        // Set Homepage
+        if defaults.bool(forKey: "customHomepage") {
+            
+            if let homepageURL = defaults.string(forKey: "homepageURL") {
+                // Custom Homepage is Enabled
+                let webURL = URL(string: homepageURL)
+                let webRequest = URLRequest(url: webURL!)
+                webView.load(webRequest)
+                print("Load Custom Homepage:", homepageURL)
+                
+            } else {
+                // No Custom Homepage, Load Default
+                homepageURL = "https://google.com"
+                let webURL = URL(string: homepageURL)
+                let webRequest = URLRequest(url: webURL!)
+                webView.load(webRequest)
+            }
+            
+        } else {
+            // No Custom Homepage, Load Default
+            homepageURL = "https://google.com"
+            let webURL = URL(string: homepageURL)
+            let webRequest = URLRequest(url: webURL!)
+            webView.load(webRequest)
+        }
+        
         // Set WebKit Load Configurations
-        let webURL = URL(string: "https://google.ca")
-        let webRequest = URLRequest(url: webURL!)
-        webView.load(webRequest)
         webView.allowsBackForwardNavigationGestures = true
         
         // Setup Menu Controller

@@ -17,6 +17,7 @@ The WiBlaze web browser was built from the ground up for durability, and above a
     - [x] <s>UIWebView</s> WKWebView
     - [x] Back & Forward
     - [x] Stop & Refresh
+    - [x] Custom Homepage
     - [ ] Add to Bookmarks
     - [ ] Show Bookmarks
 - [x] URLSearchBar

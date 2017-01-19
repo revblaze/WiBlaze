@@ -153,6 +153,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     // WebView Called for Navigation
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         activityNavigationBar?.startActivity(andWaitAt: 0.8)
+        
+        //if webView.url?.absoluteString.hasPrefix("https://")
+        activityNavigationBar?.activityBarColor = UIColor.white
     }
     
     // WebView Started Downloading Content

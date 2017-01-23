@@ -13,6 +13,7 @@ import SideMenu
     @objc optional func refreshClicked()
     @objc optional func goHomeClicked()
     @objc optional func requestDesktop()
+    @objc optional func showSourceCode()
 }
 
 class SideMenuTableView: UITableViewController {
@@ -61,6 +62,12 @@ class SideMenuTableView: UITableViewController {
         NotificationCenter.default.post(name: Notification.Name("RequestDesktopNotification"), object: nil)
         close()
         print("Request Desktop Site")
+    }
+    
+    @IBAction func showSource(sender: AnyObject!) {
+        NotificationCenter.default.post(name: Notification.Name("ShowSourceCodeNotification"), object: nil)
+        close()
+        print("Show WebView Source Code")
     }
     
     @IBAction func inDevelopment(sender: AnyObject!) {

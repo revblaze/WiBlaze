@@ -8,14 +8,19 @@
 
 import UIKit
 
-class SourceViewController: UIViewController {
+class SourceViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet var sourceCode: UITextView!
+    weak var delegate: ViewController?
+    var code: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        sourceCode.text = code
     }
 
     override func didReceiveMemoryWarning() {

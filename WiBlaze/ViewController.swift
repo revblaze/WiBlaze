@@ -16,6 +16,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     let defaults = UserDefaults.standard
     
     var webView: WKWebView!
+    var sourceCode: String! = ""
 
     @IBOutlet var addressBar: UITextField!
     @IBOutlet var backButton: UIBarButtonItem!
@@ -89,6 +90,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("RefreshNotification"), object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("GoHomeNotification"), object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("RequestDesktopNotification"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("ShowSourceCodeNotification"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,6 +99,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveRefreshNotification(notification:)), name: NSNotification.Name("RefreshNotification"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveGoHomeNotification(notification:)), name: NSNotification.Name("GoHomeNotification"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveRequestDesktopNotification(notification:)), name: NSNotification.Name("RequestDesktopNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveShowSourceCodeNotification(notification:)), name: NSNotification.Name("ShowSourceCodeNotification"), object: nil)
     }
     
     // Setup Address Bar
@@ -251,12 +254,30 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         webView.reload()
     }
     
-    func showSourceCode() {
-        webView.evaluateJavaScript("document.getElementsByTagName('html')[0].innerHTML") { sourceCode, error in
-            print(sourceCode!)
-        }
+    func receiveShowSourceCodeNotification(notification: Notification) {
+        returnSourceCode()
+        performSegue(withIdentifier: "showSource", sender: nil)
     }
-
+    
+    func getSourceCode() {
+        
+        let jCode = "document.documentElement.outerHTML.toString()"
+        webView.evaluateJavaScript(jCode, completionHandler: { (html: Any?, Error: Error?) in
+            let webCode = html
+            self.sourceCode = webCode as! String
+            self.returnSourceCode()
+        })
+    }
+    
+    func returnSourceCode() -> String {
+        
+        if self.sourceCode == "" {
+            getSourceCode()
+        }
+        
+        return self.sourceCode
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -270,6 +291,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         // Pass the selected object to the new view controller.
         if let vc = segue.destination as? UISideMenuNavigationController {
             vc.delegate = self
+        }
+        
+        if segue.identifier == "showSource" {
+            let passCode: String! = returnSourceCode()
+            let codeController = segue.destination as! SourceViewController
+            codeController.code = passCode
         }
     }
 }

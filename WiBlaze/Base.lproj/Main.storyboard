@@ -57,6 +57,7 @@
                     <connections>
                         <outlet property="addressBar" destination="9xZ-JQ-AGt" id="oet-Zk-eUD"/>
                         <outlet property="backButton" destination="HhQ-Kx-d1A" id="1md-7n-aAg"/>
+                        <segue destination="ECE-sH-QmL" kind="show" identifier="showSource" id="CDs-vH-bPv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,7 +67,7 @@
         <!--Source View Controller-->
         <scene sceneID="h4a-zz-M2O">
             <objects>
-                <viewController id="ECE-sH-QmL" customClass="SourceViewController" customModule="WiBlaze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SourceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ECE-sH-QmL" customClass="SourceViewController" customModule="WiBlaze" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R9d-Z7-pW2"/>
                         <viewControllerLayoutGuide type="bottom" id="z7y-fF-Y7w"/>
@@ -79,7 +80,7 @@
                                 <rect key="frame" x="16" y="0.0" width="343" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.94479695431472077" green="0.94479695431472077" blue="0.94479695431472077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -261,8 +262,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title=" "/>
                                                     <connections>
-                                                        <action selector="requestDesktopWithSender:" destination="msP-nz-gxM" eventType="touchUpInside" id="AGT-Dv-j0M"/>
-                                                        <segue destination="ECE-sH-QmL" kind="show" id="NEO-dk-NWB"/>
+                                                        <action selector="showSourceWithSender:" destination="msP-nz-gxM" eventType="touchUpInside" id="wLd-nX-vfV"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Show Source Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8TU-zD-paf">

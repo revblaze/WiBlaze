@@ -12,20 +12,21 @@ The WiBlaze web browser was built from the ground up for durability, and above a
 - Optimized for Speed Loading
 
 ## Completed
-- [ ] UI Foundation
+- [x] UI Foundation
     - [x] URLSearchBar
     - [x] <s>UIWebView</s> WKWebView
     - [x] Back & Forward
+    - [x] Gesture Navigation
     - [x] Stop & Refresh
     - [x] Custom Homepage
-    - [ ] Add to Bookmarks
-    - [ ] Show Bookmarks
+    - [x] Network Detection
+    - [x] WebView Source Code
 - [x] URLSearchBar
     - [x] URL-Search Detection
     - [x] Loading Search & URL
 - [ ] Bookmarks
     - [ ] Adding Bookmarks
-    - [ ] Displaying Bookmarks
+    - [ ] Listing Bookmarks
     - [ ] Loading Bookmarks
 
 ## Known Errors

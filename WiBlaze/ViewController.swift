@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 import ActivityNavigationBar
 import SideMenu
+import SystemConfiguration
 
 class ViewController: UIViewController, UINavigationControllerDelegate, WKNavigationDelegate, UITextFieldDelegate, SideMenuTableViewDelegate {
 
@@ -38,6 +39,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        noNetworkConnection()
         
         addressBar.delegate = self
         var homepageURL: String!
@@ -166,6 +169,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         let webURL = URL(string: address)
         let webRequest = URLRequest(url: webURL!)
         webView.load(webRequest)
+        noNetworkConnection()
+    }
+    
+    func noNetworkConnection() {
+        if isConnectedToNetwork() == false {
+            print("No Network Connection")
+            activityNavigationBar?.reset()
+            
+            let filePath: String? = Bundle.main.path(forResource: "Network/index", ofType: "html")
+            let html = try! String(contentsOfFile: filePath!, encoding: String.Encoding.utf8)
+            webView.loadHTMLString(html, baseURL: Bundle.main.resourceURL)
+        }
     }
     
     // WebView Called for Navigation
@@ -255,27 +270,29 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     }
     
     func receiveShowSourceCodeNotification(notification: Notification) {
-        returnSourceCode()
         performSegue(withIdentifier: "showSource", sender: nil)
     }
     
-    func getSourceCode() {
+    func isConnectedToNetwork() -> Bool {
         
-        let jCode = "document.documentElement.outerHTML.toString()"
-        webView.evaluateJavaScript(jCode, completionHandler: { (html: Any?, Error: Error?) in
-            let webCode = html
-            self.sourceCode = webCode as! String
-            self.returnSourceCode()
-        })
-    }
-    
-    func returnSourceCode() -> String {
-        
-        if self.sourceCode == "" {
-            getSourceCode()
+        var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {zeroSockAddress in
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
         }
         
-        return self.sourceCode
+        var flags: SCNetworkReachabilityFlags = SCNetworkReachabilityFlags(rawValue: 0)
+        if SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) == false {
+            return false
+        }
+        
+        let isReachable = flags.contains(.reachable)
+        let needsConnection = flags.contains(.connectionRequired)
+        
+        return isReachable && !needsConnection
     }
     
     override func didReceiveMemoryWarning() {
@@ -294,9 +311,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         }
         
         if segue.identifier == "showSource" {
-            let passCode: String! = returnSourceCode()
-            let codeController = segue.destination as! SourceViewController
-            codeController.code = passCode
+            
+            let jCode = "document.documentElement.outerHTML.toString()"
+            webView.evaluateJavaScript(jCode, completionHandler: { (html: Any?, Error: Error?) in
+                let webCode = html
+                let code = webCode as! String
+                let codeController = segue.destination as! SourceViewController
+                codeController.code = code
+            })
         }
     }
 }

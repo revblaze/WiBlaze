@@ -9,6 +9,39 @@
 /* Begin PBXBuildFile section */
 		4D38D8641E3668240097F24E /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D38D8631E3668240097F24E /* SourceViewController.swift */; };
 		4D38D8661E366A800097F24E /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8651E366A800097F24E /* SFMono-Regular.otf */; };
+		4D38D8931E36AFD90097F24E /* font-awesome.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D86A1E36AFD90097F24E /* font-awesome.min.css */; };
+		4D38D8941E36AFD90097F24E /* ie8.css in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D86B1E36AFD90097F24E /* ie8.css */; };
+		4D38D8951E36AFD90097F24E /* ie9.css in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D86C1E36AFD90097F24E /* ie9.css */; };
+		4D38D8961E36AFD90097F24E /* main.css in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D86D1E36AFD90097F24E /* main.css */; };
+		4D38D8971E36AFD90097F24E /* noscript.css in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D86E1E36AFD90097F24E /* noscript.css */; };
+		4D38D8981E36AFD90097F24E /* fontawesome-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8701E36AFD90097F24E /* fontawesome-webfont.eot */; };
+		4D38D8991E36AFD90097F24E /* fontawesome-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8711E36AFD90097F24E /* fontawesome-webfont.svg */; };
+		4D38D89A1E36AFD90097F24E /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8721E36AFD90097F24E /* fontawesome-webfont.ttf */; };
+		4D38D89B1E36AFD90097F24E /* fontawesome-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8731E36AFD90097F24E /* fontawesome-webfont.woff */; };
+		4D38D89C1E36AFD90097F24E /* fontawesome-webfont.woff2 in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8741E36AFD90097F24E /* fontawesome-webfont.woff2 */; };
+		4D38D89D1E36AFD90097F24E /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8751E36AFD90097F24E /* FontAwesome.otf */; };
+		4D38D89E1E36AFD90097F24E /* html5shiv.js in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8771E36AFD90097F24E /* html5shiv.js */; };
+		4D38D89F1E36AFD90097F24E /* PIE.htc in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8781E36AFD90097F24E /* PIE.htc */; };
+		4D38D8A01E36AFD90097F24E /* respond.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8791E36AFD90097F24E /* respond.min.js */; };
+		4D38D8A11E36AFD90097F24E /* _page.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D87C1E36AFD90097F24E /* _page.scss */; };
+		4D38D8A21E36AFD90097F24E /* _typography.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D87D1E36AFD90097F24E /* _typography.scss */; };
+		4D38D8A31E36AFD90097F24E /* _button.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D87F1E36AFD90097F24E /* _button.scss */; };
+		4D38D8A41E36AFD90097F24E /* _form.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8801E36AFD90097F24E /* _form.scss */; };
+		4D38D8A51E36AFD90097F24E /* _icon.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8811E36AFD90097F24E /* _icon.scss */; };
+		4D38D8A61E36AFD90097F24E /* _list.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8821E36AFD90097F24E /* _list.scss */; };
+		4D38D8A71E36AFD90097F24E /* ie8.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8831E36AFD90097F24E /* ie8.scss */; };
+		4D38D8A81E36AFD90097F24E /* ie9.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8841E36AFD90097F24E /* ie9.scss */; };
+		4D38D8A91E36AFD90097F24E /* _footer.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8861E36AFD90097F24E /* _footer.scss */; };
+		4D38D8AA1E36AFD90097F24E /* _main.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8871E36AFD90097F24E /* _main.scss */; };
+		4D38D8AB1E36AFD90097F24E /* _wrapper.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8881E36AFD90097F24E /* _wrapper.scss */; };
+		4D38D8AC1E36AFD90097F24E /* _functions.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D88A1E36AFD90097F24E /* _functions.scss */; };
+		4D38D8AD1E36AFD90097F24E /* _mixins.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D88B1E36AFD90097F24E /* _mixins.scss */; };
+		4D38D8AE1E36AFD90097F24E /* _skel.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D88C1E36AFD90097F24E /* _skel.scss */; };
+		4D38D8AF1E36AFD90097F24E /* _vars.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D88D1E36AFD90097F24E /* _vars.scss */; };
+		4D38D8B01E36AFD90097F24E /* main.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D88E1E36AFD90097F24E /* main.scss */; };
+		4D38D8B11E36AFD90097F24E /* noscript.scss in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D88F1E36AFD90097F24E /* noscript.scss */; };
+		4D38D8B21E36AFD90097F24E /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8911E36AFD90097F24E /* bg.jpg */; };
+		4D38D8B31E36AFD90097F24E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8921E36AFD90097F24E /* index.html */; };
 		4D7E0B161E2D290E00A12896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0B151E2D290E00A12896 /* AppDelegate.swift */; };
 		4D7E0B181E2D290E00A12896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0B171E2D290E00A12896 /* ViewController.swift */; };
 		4D7E0B1B1E2D290E00A12896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B191E2D290E00A12896 /* Main.storyboard */; };
@@ -25,6 +58,39 @@
 		03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiBlaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D38D8631E3668240097F24E /* SourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		4D38D8651E366A800097F24E /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Regular.otf"; sourceTree = "<group>"; };
+		4D38D86A1E36AFD90097F24E /* font-awesome.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "font-awesome.min.css"; sourceTree = "<group>"; };
+		4D38D86B1E36AFD90097F24E /* ie8.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ie8.css; sourceTree = "<group>"; };
+		4D38D86C1E36AFD90097F24E /* ie9.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ie9.css; sourceTree = "<group>"; };
+		4D38D86D1E36AFD90097F24E /* main.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = main.css; sourceTree = "<group>"; };
+		4D38D86E1E36AFD90097F24E /* noscript.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = noscript.css; sourceTree = "<group>"; };
+		4D38D8701E36AFD90097F24E /* fontawesome-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.eot"; sourceTree = "<group>"; };
+		4D38D8711E36AFD90097F24E /* fontawesome-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "fontawesome-webfont.svg"; sourceTree = "<group>"; };
+		4D38D8721E36AFD90097F24E /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		4D38D8731E36AFD90097F24E /* fontawesome-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.woff"; sourceTree = "<group>"; };
+		4D38D8741E36AFD90097F24E /* fontawesome-webfont.woff2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.woff2"; sourceTree = "<group>"; };
+		4D38D8751E36AFD90097F24E /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		4D38D8771E36AFD90097F24E /* html5shiv.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = html5shiv.js; sourceTree = "<group>"; };
+		4D38D8781E36AFD90097F24E /* PIE.htc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PIE.htc; sourceTree = "<group>"; };
+		4D38D8791E36AFD90097F24E /* respond.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = respond.min.js; sourceTree = "<group>"; };
+		4D38D87C1E36AFD90097F24E /* _page.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _page.scss; sourceTree = "<group>"; };
+		4D38D87D1E36AFD90097F24E /* _typography.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _typography.scss; sourceTree = "<group>"; };
+		4D38D87F1E36AFD90097F24E /* _button.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _button.scss; sourceTree = "<group>"; };
+		4D38D8801E36AFD90097F24E /* _form.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _form.scss; sourceTree = "<group>"; };
+		4D38D8811E36AFD90097F24E /* _icon.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _icon.scss; sourceTree = "<group>"; };
+		4D38D8821E36AFD90097F24E /* _list.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _list.scss; sourceTree = "<group>"; };
+		4D38D8831E36AFD90097F24E /* ie8.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ie8.scss; sourceTree = "<group>"; };
+		4D38D8841E36AFD90097F24E /* ie9.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ie9.scss; sourceTree = "<group>"; };
+		4D38D8861E36AFD90097F24E /* _footer.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _footer.scss; sourceTree = "<group>"; };
+		4D38D8871E36AFD90097F24E /* _main.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _main.scss; sourceTree = "<group>"; };
+		4D38D8881E36AFD90097F24E /* _wrapper.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _wrapper.scss; sourceTree = "<group>"; };
+		4D38D88A1E36AFD90097F24E /* _functions.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _functions.scss; sourceTree = "<group>"; };
+		4D38D88B1E36AFD90097F24E /* _mixins.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _mixins.scss; sourceTree = "<group>"; };
+		4D38D88C1E36AFD90097F24E /* _skel.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _skel.scss; sourceTree = "<group>"; };
+		4D38D88D1E36AFD90097F24E /* _vars.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = _vars.scss; sourceTree = "<group>"; };
+		4D38D88E1E36AFD90097F24E /* main.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.scss; sourceTree = "<group>"; };
+		4D38D88F1E36AFD90097F24E /* noscript.scss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = noscript.scss; sourceTree = "<group>"; };
+		4D38D8911E36AFD90097F24E /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		4D38D8921E36AFD90097F24E /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		4D7E0B121E2D290E00A12896 /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7E0B151E2D290E00A12896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D7E0B171E2D290E00A12896 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +118,126 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D38D8671E36AFD90097F24E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D8681E36AFD90097F24E /* assets */,
+				4D38D8901E36AFD90097F24E /* images */,
+				4D38D8921E36AFD90097F24E /* index.html */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4D38D8681E36AFD90097F24E /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D8691E36AFD90097F24E /* css */,
+				4D38D86F1E36AFD90097F24E /* fonts */,
+				4D38D8761E36AFD90097F24E /* js */,
+				4D38D87A1E36AFD90097F24E /* sass */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		4D38D8691E36AFD90097F24E /* css */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D86A1E36AFD90097F24E /* font-awesome.min.css */,
+				4D38D86B1E36AFD90097F24E /* ie8.css */,
+				4D38D86C1E36AFD90097F24E /* ie9.css */,
+				4D38D86D1E36AFD90097F24E /* main.css */,
+				4D38D86E1E36AFD90097F24E /* noscript.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		4D38D86F1E36AFD90097F24E /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D8701E36AFD90097F24E /* fontawesome-webfont.eot */,
+				4D38D8711E36AFD90097F24E /* fontawesome-webfont.svg */,
+				4D38D8721E36AFD90097F24E /* fontawesome-webfont.ttf */,
+				4D38D8731E36AFD90097F24E /* fontawesome-webfont.woff */,
+				4D38D8741E36AFD90097F24E /* fontawesome-webfont.woff2 */,
+				4D38D8751E36AFD90097F24E /* FontAwesome.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		4D38D8761E36AFD90097F24E /* js */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D8771E36AFD90097F24E /* html5shiv.js */,
+				4D38D8781E36AFD90097F24E /* PIE.htc */,
+				4D38D8791E36AFD90097F24E /* respond.min.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		4D38D87A1E36AFD90097F24E /* sass */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D87B1E36AFD90097F24E /* base */,
+				4D38D87E1E36AFD90097F24E /* components */,
+				4D38D8831E36AFD90097F24E /* ie8.scss */,
+				4D38D8841E36AFD90097F24E /* ie9.scss */,
+				4D38D8851E36AFD90097F24E /* layout */,
+				4D38D8891E36AFD90097F24E /* libs */,
+				4D38D88E1E36AFD90097F24E /* main.scss */,
+				4D38D88F1E36AFD90097F24E /* noscript.scss */,
+			);
+			path = sass;
+			sourceTree = "<group>";
+		};
+		4D38D87B1E36AFD90097F24E /* base */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D87C1E36AFD90097F24E /* _page.scss */,
+				4D38D87D1E36AFD90097F24E /* _typography.scss */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		4D38D87E1E36AFD90097F24E /* components */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D87F1E36AFD90097F24E /* _button.scss */,
+				4D38D8801E36AFD90097F24E /* _form.scss */,
+				4D38D8811E36AFD90097F24E /* _icon.scss */,
+				4D38D8821E36AFD90097F24E /* _list.scss */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		4D38D8851E36AFD90097F24E /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D8861E36AFD90097F24E /* _footer.scss */,
+				4D38D8871E36AFD90097F24E /* _main.scss */,
+				4D38D8881E36AFD90097F24E /* _wrapper.scss */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		4D38D8891E36AFD90097F24E /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D88A1E36AFD90097F24E /* _functions.scss */,
+				4D38D88B1E36AFD90097F24E /* _mixins.scss */,
+				4D38D88C1E36AFD90097F24E /* _skel.scss */,
+				4D38D88D1E36AFD90097F24E /* _vars.scss */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		4D38D8901E36AFD90097F24E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4D38D8911E36AFD90097F24E /* bg.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		4D7E0B091E2D290D00A12896 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +279,7 @@
 				4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */,
 				4D38D8651E366A800097F24E /* SFMono-Regular.otf */,
 				4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */,
+				4D38D8671E36AFD90097F24E /* Network */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -177,12 +364,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D38D8B01E36AFD90097F24E /* main.scss in Resources */,
+				4D38D8951E36AFD90097F24E /* ie9.css in Resources */,
+				4D38D8A11E36AFD90097F24E /* _page.scss in Resources */,
+				4D38D8B31E36AFD90097F24E /* index.html in Resources */,
+				4D38D8AB1E36AFD90097F24E /* _wrapper.scss in Resources */,
 				4D38D8661E366A800097F24E /* SFMono-Regular.otf in Resources */,
 				4D7E0B201E2D290E00A12896 /* LaunchScreen.storyboard in Resources */,
+				4D38D8A51E36AFD90097F24E /* _icon.scss in Resources */,
+				4D38D89D1E36AFD90097F24E /* FontAwesome.otf in Resources */,
+				4D38D8A91E36AFD90097F24E /* _footer.scss in Resources */,
+				4D38D8981E36AFD90097F24E /* fontawesome-webfont.eot in Resources */,
+				4D38D8B21E36AFD90097F24E /* bg.jpg in Resources */,
 				4D7E0B1D1E2D290E00A12896 /* Assets.xcassets in Resources */,
+				4D38D8A41E36AFD90097F24E /* _form.scss in Resources */,
+				4D38D89C1E36AFD90097F24E /* fontawesome-webfont.woff2 in Resources */,
+				4D38D89B1E36AFD90097F24E /* fontawesome-webfont.woff in Resources */,
+				4D38D8971E36AFD90097F24E /* noscript.css in Resources */,
+				4D38D8A21E36AFD90097F24E /* _typography.scss in Resources */,
+				4D38D8AA1E36AFD90097F24E /* _main.scss in Resources */,
+				4D38D8A81E36AFD90097F24E /* ie9.scss in Resources */,
+				4D38D8AC1E36AFD90097F24E /* _functions.scss in Resources */,
+				4D38D8931E36AFD90097F24E /* font-awesome.min.css in Resources */,
+				4D38D8A31E36AFD90097F24E /* _button.scss in Resources */,
+				4D38D8A01E36AFD90097F24E /* respond.min.js in Resources */,
+				4D38D8AD1E36AFD90097F24E /* _mixins.scss in Resources */,
+				4D38D8AF1E36AFD90097F24E /* _vars.scss in Resources */,
+				4D38D8991E36AFD90097F24E /* fontawesome-webfont.svg in Resources */,
+				4D38D8A71E36AFD90097F24E /* ie8.scss in Resources */,
+				4D38D8941E36AFD90097F24E /* ie8.css in Resources */,
+				4D38D89A1E36AFD90097F24E /* fontawesome-webfont.ttf in Resources */,
+				4D38D8AE1E36AFD90097F24E /* _skel.scss in Resources */,
+				4D38D8961E36AFD90097F24E /* main.css in Resources */,
+				4D38D89F1E36AFD90097F24E /* PIE.htc in Resources */,
 				4D7E0B2B1E2D3A6100A12896 /* GoogleService-Info.plist in Resources */,
 				4D7E0B291E2D2DBE00A12896 /* Roboto-Regular.ttf in Resources */,
+				4D38D8A61E36AFD90097F24E /* _list.scss in Resources */,
+				4D38D8B11E36AFD90097F24E /* noscript.scss in Resources */,
 				4D7E0B1B1E2D290E00A12896 /* Main.storyboard in Resources */,
+				4D38D89E1E36AFD90097F24E /* html5shiv.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

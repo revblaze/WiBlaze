@@ -111,6 +111,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" alpha="0.05000000074505806" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHx-XR-Vqi" userLabel="Go Home">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title=" "/>
+                                                    <connections>
+                                                        <action selector="inDevelopmentWithSender:" destination="msP-nz-gxM" eventType="touchUpInside" id="XlU-Rc-C5v"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Go Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aUR-El-YIp">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -128,6 +137,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" alpha="0.05000000074505806" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1A-JX-dlf" userLabel="Add to Bookmarks">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title=" "/>
+                                                    <connections>
+                                                        <action selector="inDevelopmentWithSender:" destination="msP-nz-gxM" eventType="touchUpInside" id="AVO-eI-w80"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Add to Bookmarks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="le2-K7-Wga">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -145,6 +163,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" alpha="0.05000000074505806" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lN-yx-wxr" userLabel="Open Bookmarks...">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title=" "/>
+                                                    <connections>
+                                                        <action selector="inDevelopmentWithSender:" destination="msP-nz-gxM" eventType="touchUpInside" id="1r3-Bw-dLp"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Open Bookmarks..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v6g-yk-uZD">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -162,6 +189,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" alpha="0.05000000074505806" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWs-Dy-Wx6" userLabel="Request Dekstop Site">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title=" "/>
+                                                    <connections>
+                                                        <action selector="inDevelopmentWithSender:" destination="msP-nz-gxM" eventType="touchUpInside" id="TdV-OL-pa2"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Request Desktop Site" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eR8-ma-yFZ">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
@@ -314,7 +350,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fzl-0w-9OC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WLf-hi-ztY" customClass="ActivityNavigationBar" customModule="ActivityNavigationBar">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WLf-hi-ztY" customClass="ActivityNavigationBar" customModule="ActivityNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

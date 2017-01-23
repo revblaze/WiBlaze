@@ -45,6 +45,12 @@ class SideMenuTableView: UITableViewController {
         print("Active Refresh")
     }
     
+    @IBAction func inDevelopment(sender: AnyObject!) {
+        let alert = UIAlertController(title: "Under Development", message: "This feature is currently under development and will be available in the next update.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
     }

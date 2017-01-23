@@ -40,8 +40,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        noNetworkConnection()
-        
         addressBar.delegate = self
         var homepageURL: String!
         
@@ -98,6 +96,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        noNetworkConnection()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveRefreshNotification(notification:)), name: NSNotification.Name("RefreshNotification"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveGoHomeNotification(notification:)), name: NSNotification.Name("GoHomeNotification"), object: nil)
@@ -169,23 +169,23 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         let webURL = URL(string: address)
         let webRequest = URLRequest(url: webURL!)
         webView.load(webRequest)
-        noNetworkConnection()
     }
     
+    // Called when user is not connected to a network
     func noNetworkConnection() {
         if isConnectedToNetwork() == false {
             print("No Network Connection")
             activityNavigationBar?.reset()
-            
-            let filePath: String? = Bundle.main.path(forResource: "Network/index", ofType: "html")
-            let html = try! String(contentsOfFile: filePath!, encoding: String.Encoding.utf8)
-            webView.loadHTMLString(html, baseURL: Bundle.main.resourceURL)
+            let alert = UIAlertController(title: "Network Error", message: "You are currently not connected to a network. Please connect and try again.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     // WebView Called for Navigation
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         activityNavigationBar?.startActivity(andWaitAt: 0.8)
+        noNetworkConnection()
         
         //if webView.url?.absoluteString.hasPrefix("https://")
         activityNavigationBar?.activityBarColor = UIColor.white

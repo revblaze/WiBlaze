@@ -9,9 +9,15 @@
 import Foundation
 import SideMenu
 
+@objc protocol SideMenuTableViewDelegate {
+    @objc optional func refreshClicked()
+    @objc optional func goHomeClicked()
+    @objc optional func requestDesktop()
+}
+
 class SideMenuTableView: UITableViewController {
     
-    var delegate: MainViewControllerDelegate?
+    var delegate: SideMenuTableViewDelegate?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,19 +46,19 @@ class SideMenuTableView: UITableViewController {
     }
     
     @IBAction func refresh(sender: AnyObject!) {
-        delegate?.refresh()
+        NotificationCenter.default.post(name: Notification.Name("RefreshNotification"), object: nil)
         close()
         print("Active Refresh")
     }
     
     @IBAction func goHome(sender: AnyObject!) {
-        delegate?.goHome()
+        NotificationCenter.default.post(name: Notification.Name("GoHomeNotification"), object: nil)
         close()
         print("Go to Homepage")
     }
     
     @IBAction func requestDesktop(sender: AnyObject!) {
-        delegate?.requestDesktop()
+        NotificationCenter.default.post(name: Notification.Name("RequestDesktopNotification"), object: nil)
         close()
         print("Request Desktop Site")
     }

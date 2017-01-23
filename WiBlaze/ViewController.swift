@@ -11,13 +11,7 @@ import WebKit
 import ActivityNavigationBar
 import SideMenu
 
-protocol MainViewControllerDelegate {
-    func refresh()
-    func goHome()
-    func requestDesktop()
-}
-
-class ViewController: UIViewController, UINavigationControllerDelegate, WKNavigationDelegate, UITextFieldDelegate, MainViewControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate, WKNavigationDelegate, UITextFieldDelegate, SideMenuTableViewDelegate {
 
     let defaults = UserDefaults.standard
     
@@ -87,6 +81,22 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         
         // Set Menu Width (eg. * 0.65 = 65%)
         SideMenuManager.menuWidth = max(round(min((appScreenRect.width), (appScreenRect.height)) * 0.65), 240)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("RefreshNotification"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("GoHomeNotification"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("RequestDesktopNotification"), object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveRefreshNotification(notification:)), name: NSNotification.Name("RefreshNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveGoHomeNotification(notification:)), name: NSNotification.Name("GoHomeNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveRequestDesktopNotification(notification:)), name: NSNotification.Name("RequestDesktopNotification"), object: nil)
     }
     
     // Setup Address Bar
@@ -198,12 +208,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     }
     
     // Refresh WebView Content
-    func refresh() {
+    func receiveRefreshNotification(notification: Notification) {
         webView.reload()
         print("Refresh Page")
     }
     
-    func goHome() {
+    func receiveGoHomeNotification(notification: Notification) {
         var homepageURL: String!
         
         // Set Homepage
@@ -233,12 +243,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         }
     }
     
-    func requestDesktop() {
+    func receiveRequestDesktopNotification(notification: Notification) {
         // Set Desktop UserAgent
         let desktopAgent: String! = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
         webView.customUserAgent = desktopAgent
         print("Request URL with UserAgent:", webView.customUserAgent!)
-        refresh()
+        webView.reload()
     }
     
     func showSourceCode() {
@@ -258,7 +268,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if let vc = segue.destination as? SideMenuTableView {
+        if let vc = segue.destination as? UISideMenuNavigationController {
             vc.delegate = self
         }
     }

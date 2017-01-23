@@ -13,6 +13,8 @@ import SideMenu
 
 protocol MainViewControllerDelegate {
     func refresh()
+    func goHome()
+    func requestDesktop()
 }
 
 class ViewController: UIViewController, UINavigationControllerDelegate, WKNavigationDelegate, UITextFieldDelegate, MainViewControllerDelegate {
@@ -194,6 +196,45 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     func refresh() {
         webView.reload()
         print("Refresh Page")
+    }
+    
+    func goHome() {
+        var homepageURL: String!
+        
+        // Set Homepage
+        if defaults.bool(forKey: "customHomepage") {
+            
+            if let homepageURL = defaults.string(forKey: "homepageURL") {
+                // Custom Homepage is Enabled
+                let webURL = URL(string: homepageURL)
+                let webRequest = URLRequest(url: webURL!)
+                webView.load(webRequest)
+                print("Load Custom Homepage:", homepageURL)
+                
+            } else {
+                // No Custom Homepage, Load Default
+                homepageURL = "https://google.com"
+                let webURL = URL(string: homepageURL)
+                let webRequest = URLRequest(url: webURL!)
+                webView.load(webRequest)
+            }
+            
+        } else {
+            // No Custom Homepage, Load Default
+            homepageURL = "https://google.com"
+            let webURL = URL(string: homepageURL)
+            let webRequest = URLRequest(url: webURL!)
+            webView.load(webRequest)
+        }
+    }
+    
+    func requestDesktop() {
+        let desktopAgent: String! = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
+        
+        // Set Desktop UserAgent
+        defaults.register(defaults: ["UserAgent": desktopAgent])
+        
+        // Restart UIWebView
     }
 
     override func didReceiveMemoryWarning() {

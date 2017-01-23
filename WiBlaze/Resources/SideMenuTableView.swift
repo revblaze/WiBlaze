@@ -45,6 +45,18 @@ class SideMenuTableView: UITableViewController {
         print("Active Refresh")
     }
     
+    @IBAction func goHome(sender: AnyObject!) {
+        delegate?.goHome()
+        close()
+        print("Go to Homepage")
+    }
+    
+    @IBAction func requestDesktop(sender: AnyObject!) {
+        delegate?.requestDesktop()
+        close()
+        print("Request Desktop Site")
+    }
+    
     @IBAction func inDevelopment(sender: AnyObject!) {
         let alert = UIAlertController(title: "Under Development", message: "This feature is currently under development and will be available in the next update.", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))

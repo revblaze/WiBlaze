@@ -146,6 +146,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     
     // Load URL in the WebView
     func loadURL(address: String) {
+        if (webView.customUserAgent != "") {
+            webView.customUserAgent = ""
+        }
         let address = formatURL(userRequest: address)
         let webURL = URL(string: address)
         let webRequest = URLRequest(url: webURL!)
@@ -175,6 +178,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         addressBar.text = webView.url?.absoluteString
         activityNavigationBar?.reset()
+        print("Successfully Loaded:", addressBar)
     }
     
     // Setup Activity Navigation
@@ -190,6 +194,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     // Go Back to Previous WebPage
     @IBAction func goBack(sender: AnyObject) {
         webView.goBack()
+        print("Load Previous URL")
     }
     
     // Refresh WebView Content
@@ -229,12 +234,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     }
     
     func requestDesktop() {
-        let desktopAgent: String! = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
-        
         // Set Desktop UserAgent
-        defaults.register(defaults: ["UserAgent": desktopAgent])
-        
-        // Restart UIWebView
+        let desktopAgent: String! = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0.2 Safari/602.3.12"
+        webView.customUserAgent = desktopAgent
+        print("Request URL with UserAgent:", webView.customUserAgent!)
+        refresh()
+    }
+    
+    func showSourceCode() {
+        webView.evaluateJavaScript("document.getElementsByTagName('html')[0].innerHTML") { sourceCode, error in
+            print(sourceCode!)
+        }
     }
 
     override func didReceiveMemoryWarning() {

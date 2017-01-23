@@ -22,7 +22,7 @@ class SideMenuTableView: UITableViewController {
         }
         
         // Set up a cool background image for demo purposes
-        let imageView = UIImageView(image: UIImage(named: "Stars"))
+        let imageView = UIImageView(image: UIImage(named: "Tile"))
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
         tableView.backgroundView = imageView

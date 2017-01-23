@@ -34,6 +34,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Regular.ttf</string>
+		<string>SFMono-Regular.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

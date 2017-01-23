@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D38D8641E3668240097F24E /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D38D8631E3668240097F24E /* SourceViewController.swift */; };
+		4D38D8661E366A800097F24E /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8651E366A800097F24E /* SFMono-Regular.otf */; };
 		4D7E0B161E2D290E00A12896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0B151E2D290E00A12896 /* AppDelegate.swift */; };
 		4D7E0B181E2D290E00A12896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0B171E2D290E00A12896 /* ViewController.swift */; };
 		4D7E0B1B1E2D290E00A12896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B191E2D290E00A12896 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiBlaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D38D8631E3668240097F24E /* SourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
+		4D38D8651E366A800097F24E /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Regular.otf"; sourceTree = "<group>"; };
 		4D7E0B121E2D290E00A12896 /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7E0B151E2D290E00A12896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D7E0B171E2D290E00A12896 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */,
+				4D38D8631E3668240097F24E /* SourceViewController.swift */,
 				4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */,
+				4D38D8651E366A800097F24E /* SFMono-Regular.otf */,
 				4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
@@ -171,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D38D8661E366A800097F24E /* SFMono-Regular.otf in Resources */,
 				4D7E0B201E2D290E00A12896 /* LaunchScreen.storyboard in Resources */,
 				4D7E0B1D1E2D290E00A12896 /* Assets.xcassets in Resources */,
 				4D7E0B2B1E2D3A6100A12896 /* GoogleService-Info.plist in Resources */,
@@ -234,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D38D8641E3668240097F24E /* SourceViewController.swift in Sources */,
 				4D7E0B181E2D290E00A12896 /* ViewController.swift in Sources */,
 				4D7E0B161E2D290E00A12896 /* AppDelegate.swift in Sources */,
 				4DDB9BDE1E2D541D00F6D617 /* SideMenuTableView.swift in Sources */,

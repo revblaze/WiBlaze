@@ -1,6 +1,6 @@
 <img src="WiBlaze.png" width="860" />
 
-<b>WiBlaze</b> is an open source web browser for the iOS and OS X platforms.
+<b>WiBlaze</b> is an open source web browser for the iOS and macOS platforms.
 
 ## Goals
 The WiBlaze web browser was built from the ground up for durability, and above all, speed. The end goal is to create a beautiful product, written in Swift.

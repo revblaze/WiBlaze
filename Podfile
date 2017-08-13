@@ -9,5 +9,7 @@ target 'WiBlaze' do
   pod "ActivityNavigationBar"
   pod 'Firebase/Core'
   pod 'SideMenu'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end

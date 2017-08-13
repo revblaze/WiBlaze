@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Setup Firebase
         FIRApp.configure()
+        
+        // Setup Fabric
+        Fabric.with([Crashlytics.self])
 
         return true
     }
@@ -46,3 +51,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+

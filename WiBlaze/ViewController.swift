@@ -220,6 +220,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         checkBack()
         
+        addressBar.text = webView.url?.absoluteString
+        
         if webView.estimatedProgress < 0.8 {
             activityNavigationBar?.finishActivity(withDuration: 0.8)
         } else {
@@ -231,7 +233,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         addressBar.text = webView.url?.absoluteString
         activityNavigationBar?.reset()
-        print("Successfully Loaded:", addressBar)
+        print("Loaded:", addressBar.text!)
     }
     
     // Setup Activity Navigation
@@ -346,4 +348,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
             })
         }
     }
+    
 }
+

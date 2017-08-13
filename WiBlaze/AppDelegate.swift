@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Setup Fabric
         Fabric.with([Crashlytics.self])
+        
+        Answers.logContentView(withName: "App Launch",
+                               contentType: "App Launch",
+                               contentId: "launch-01",
+                               customAttributes: [:])
 
         return true
     }

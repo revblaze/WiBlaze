@@ -72,6 +72,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
             webView.load(webRequest)
         }
         
+        // Configure User Agent
+        let phoneUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1"
+        //let padUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1"
+        
+        // Custom User Agent
+        webView.customUserAgent = phoneUserAgent
+        
         // Set WebKit Load Configurations
         webView.allowsBackForwardNavigationGestures = true
         
@@ -105,12 +112,30 @@ class ViewController: UIViewController, UINavigationControllerDelegate, WKNaviga
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveShowSourceCodeNotification(notification:)), name: NSNotification.Name("ShowSourceCodeNotification"), object: nil)
     }
     
-    // Setup Address Bar
+    // User Began Editing Address Bar
+    func textFieldDidBeginEditing(_ addressBar: UITextField) {
+        print("User began editing address bar")
+        addressBar.selectedTextRange = addressBar.textRange(from: addressBar.beginningOfDocument, to: addressBar.endOfDocument)
+    }
+    
+    // User Returned Address Bar, Setup Address Bar
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         addressBar.resignFirstResponder()
         print("User Requested:", addressBar.text!)
         loadURL(address: addressBar.text!)
         return true
+    }
+    
+    // Clean Address Bar
+    func cleanAddress(address: String) {
+        let currentURL = (webView.url)!
+        let hostURL = URL(string: "/", relativeTo: currentURL)?.absoluteURL
+        var cleanURL = (hostURL?.absoluteString)!
+        if cleanURL.hasSuffix("/") {
+            cleanURL = String(cleanURL.characters.dropLast())
+        }
+        addressBar.text = cleanURL
+        print("Clean URL:", cleanURL)
     }
 
     // Toggle Back Button

@@ -3,135 +3,92 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D38D8641E3668240097F24E /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D38D8631E3668240097F24E /* SourceViewController.swift */; };
-		4D38D8661E366A800097F24E /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D38D8651E366A800097F24E /* SFMono-Regular.otf */; };
-		4D7E0B161E2D290E00A12896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0B151E2D290E00A12896 /* AppDelegate.swift */; };
-		4D7E0B181E2D290E00A12896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0B171E2D290E00A12896 /* ViewController.swift */; };
-		4D7E0B1B1E2D290E00A12896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B191E2D290E00A12896 /* Main.storyboard */; };
-		4D7E0B1D1E2D290E00A12896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B1C1E2D290E00A12896 /* Assets.xcassets */; };
-		4D7E0B201E2D290E00A12896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B1E1E2D290E00A12896 /* LaunchScreen.storyboard */; };
-		4D7E0B291E2D2DBE00A12896 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */; };
-		4D7E0B2B1E2D3A6100A12896 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */; };
-		4D9AF8D01EB239200024D3CC /* JBURLSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AF8CF1EB239200024D3CC /* JBURLSearchBar.swift */; };
-		4DA824FE1E3012AD00113BB8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA824FD1E3012AD00113BB8 /* SettingsViewController.swift */; };
-		4DDB9BDE1E2D541D00F6D617 /* SideMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */; };
-		957E4906FD5E705BE5113D71 /* Pods_WiBlaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */; };
+		D0632E772451736C0000B099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0632E762451736C0000B099 /* AppDelegate.swift */; };
+		D0632E792451736C0000B099 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0632E782451736C0000B099 /* SceneDelegate.swift */; };
+		D0632E7B2451736C0000B099 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0632E7A2451736C0000B099 /* ViewController.swift */; };
+		D0632E7E2451736C0000B099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0632E7C2451736C0000B099 /* Main.storyboard */; };
+		D0632E802451736D0000B099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0632E7F2451736D0000B099 /* Assets.xcassets */; };
+		D0632E832451736D0000B099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0632E812451736D0000B099 /* LaunchScreen.storyboard */; };
+		D0CAFBFC2452064500B7567E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CAFBFB2452064500B7567E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiBlaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D38D8631E3668240097F24E /* SourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
-		4D38D8651E366A800097F24E /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Regular.otf"; sourceTree = "<group>"; };
-		4D7E0B121E2D290E00A12896 /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D7E0B151E2D290E00A12896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D7E0B171E2D290E00A12896 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4D7E0B1A1E2D290E00A12896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4D7E0B1C1E2D290E00A12896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4D7E0B1F1E2D290E00A12896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4D7E0B211E2D290E00A12896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		4D9AF8CF1EB239200024D3CC /* JBURLSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBURLSearchBar.swift; sourceTree = "<group>"; };
-		4DA824FD1E3012AD00113BB8 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableView.swift; sourceTree = "<group>"; };
-		CE49E69144CB04A9545B95A0 /* Pods-WiBlaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiBlaze.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze.release.xcconfig"; sourceTree = "<group>"; };
-		E21E10FD0B239091B88D33DA /* Pods-WiBlaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiBlaze.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze.debug.xcconfig"; sourceTree = "<group>"; };
+		D0632E732451736C0000B099 /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0632E762451736C0000B099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0632E782451736C0000B099 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D0632E7A2451736C0000B099 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0632E7D2451736C0000B099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0632E7F2451736D0000B099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0632E822451736D0000B099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0632E842451736D0000B099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0CAFBFB2452064500B7567E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4D7E0B0F1E2D290D00A12896 /* Frameworks */ = {
+		D0632E702451736C0000B099 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				957E4906FD5E705BE5113D71 /* Pods_WiBlaze.framework in Frameworks */,
+				D0CAFBFC2452064500B7567E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D7E0B091E2D290D00A12896 = {
+		D0632E6A2451736C0000B099 = {
 			isa = PBXGroup;
 			children = (
-				4D7E0B141E2D290E00A12896 /* WiBlaze */,
-				4D7E0B131E2D290E00A12896 /* Products */,
-				E0BEEFBFFED1C48E680B061F /* Pods */,
-				753EB1025AE1337143CA06AB /* Frameworks */,
+				D0632E752451736C0000B099 /* WiBlaze */,
+				D0632E742451736C0000B099 /* Products */,
+				D0CAFBFA2452064500B7567E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		4D7E0B131E2D290E00A12896 /* Products */ = {
+		D0632E742451736C0000B099 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D7E0B121E2D290E00A12896 /* WiBlaze.app */,
+				D0632E732451736C0000B099 /* WiBlaze.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D7E0B141E2D290E00A12896 /* WiBlaze */ = {
+		D0632E752451736C0000B099 /* WiBlaze */ = {
 			isa = PBXGroup;
 			children = (
-				4D7E0B151E2D290E00A12896 /* AppDelegate.swift */,
-				4D7E0B171E2D290E00A12896 /* ViewController.swift */,
-				4D9AF8CF1EB239200024D3CC /* JBURLSearchBar.swift */,
-				4DA824FD1E3012AD00113BB8 /* SettingsViewController.swift */,
-				4D7E0B191E2D290E00A12896 /* Main.storyboard */,
-				4D7E0B1C1E2D290E00A12896 /* Assets.xcassets */,
-				4D7E0B1E1E2D290E00A12896 /* LaunchScreen.storyboard */,
-				4D7E0B211E2D290E00A12896 /* Info.plist */,
-				4D7E0B271E2D2CDD00A12896 /* Resources */,
+				D0632E762451736C0000B099 /* AppDelegate.swift */,
+				D0632E782451736C0000B099 /* SceneDelegate.swift */,
+				D0632E7A2451736C0000B099 /* ViewController.swift */,
+				D0632E7C2451736C0000B099 /* Main.storyboard */,
+				D0632E7F2451736D0000B099 /* Assets.xcassets */,
+				D0632E812451736D0000B099 /* LaunchScreen.storyboard */,
+				D0632E842451736D0000B099 /* Info.plist */,
 			);
 			path = WiBlaze;
 			sourceTree = "<group>";
 		};
-		4D7E0B271E2D2CDD00A12896 /* Resources */ = {
+		D0CAFBFA2452064500B7567E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DDB9BDD1E2D541D00F6D617 /* SideMenuTableView.swift */,
-				4D38D8631E3668240097F24E /* SourceViewController.swift */,
-				4D7E0B281E2D2DBE00A12896 /* Roboto-Regular.ttf */,
-				4D38D8651E366A800097F24E /* SFMono-Regular.otf */,
-				4D7E0B2A1E2D3A6100A12896 /* GoogleService-Info.plist */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		753EB1025AE1337143CA06AB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				03FED21A5B745A0089296FFB /* Pods_WiBlaze.framework */,
+				D0CAFBFB2452064500B7567E /* WebKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E0BEEFBFFED1C48E680B061F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E21E10FD0B239091B88D33DA /* Pods-WiBlaze.debug.xcconfig */,
-				CE49E69144CB04A9545B95A0 /* Pods-WiBlaze.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4D7E0B111E2D290D00A12896 /* WiBlaze */ = {
+		D0632E722451736C0000B099 /* WiBlaze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D7E0B241E2D290E00A12896 /* Build configuration list for PBXNativeTarget "WiBlaze" */;
+			buildConfigurationList = D0632E872451736D0000B099 /* Build configuration list for PBXNativeTarget "WiBlaze" */;
 			buildPhases = (
-				1AB1790B6CCA7359EB1F50D2 /* [CP] Check Pods Manifest.lock */,
-				4D7E0B0E1E2D290D00A12896 /* Sources */,
-				4D7E0B0F1E2D290D00A12896 /* Frameworks */,
-				4D7E0B101E2D290D00A12896 /* Resources */,
-				15624A78AAA0EC0CF67DBC87 /* [CP] Embed Pods Frameworks */,
-				738923070248685FEB847725 /* [CP] Copy Pods Resources */,
-				4D06B6F61F40F0F0000D7980 /* Auto Increment Build Numbers */,
-				4D06B6F71F40F6FF000D7980 /* Fabric */,
+				D0632E6F2451736C0000B099 /* Sources */,
+				D0632E702451736C0000B099 /* Frameworks */,
+				D0632E712451736C0000B099 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -139,165 +96,81 @@
 			);
 			name = WiBlaze;
 			productName = WiBlaze;
-			productReference = 4D7E0B121E2D290E00A12896 /* WiBlaze.app */;
+			productReference = D0632E732451736C0000B099 /* WiBlaze.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4D7E0B0A1E2D290D00A12896 /* Project object */ = {
+		D0632E6B2451736C0000B099 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0830;
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Justin Bush";
 				TargetAttributes = {
-					4D7E0B111E2D290D00A12896 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 85N3S3DG8M;
-						ProvisioningStyle = Automatic;
+					D0632E722451736C0000B099 = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 4D7E0B0D1E2D290D00A12896 /* Build configuration list for PBXProject "WiBlaze" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = D0632E6E2451736C0000B099 /* Build configuration list for PBXProject "WiBlaze" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 4D7E0B091E2D290D00A12896;
-			productRefGroup = 4D7E0B131E2D290E00A12896 /* Products */;
+			mainGroup = D0632E6A2451736C0000B099;
+			productRefGroup = D0632E742451736C0000B099 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D7E0B111E2D290D00A12896 /* WiBlaze */,
+				D0632E722451736C0000B099 /* WiBlaze */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4D7E0B101E2D290D00A12896 /* Resources */ = {
+		D0632E712451736C0000B099 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D38D8661E366A800097F24E /* SFMono-Regular.otf in Resources */,
-				4D7E0B201E2D290E00A12896 /* LaunchScreen.storyboard in Resources */,
-				4D7E0B1D1E2D290E00A12896 /* Assets.xcassets in Resources */,
-				4D7E0B2B1E2D3A6100A12896 /* GoogleService-Info.plist in Resources */,
-				4D7E0B291E2D2DBE00A12896 /* Roboto-Regular.ttf in Resources */,
-				4D7E0B1B1E2D290E00A12896 /* Main.storyboard in Resources */,
+				D0632E832451736D0000B099 /* LaunchScreen.storyboard in Resources */,
+				D0632E802451736D0000B099 /* Assets.xcassets in Resources */,
+				D0632E7E2451736C0000B099 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		15624A78AAA0EC0CF67DBC87 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1AB1790B6CCA7359EB1F50D2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4D06B6F61F40F0F0000D7980 /* Auto Increment Build Numbers */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Auto Increment Build Numbers";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
-		};
-		4D06B6F71F40F6FF000D7980 /* Fabric */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Fabric;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 4728a63806c2558546cfb50e1bf445fc0ed3b712 c2706f40d7d403a1129f810e7a08b5385a4fb2369653a0f61c996151fad10373";
-		};
-		738923070248685FEB847725 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiBlaze/Pods-WiBlaze-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4D7E0B0E1E2D290D00A12896 /* Sources */ = {
+		D0632E6F2451736C0000B099 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D38D8641E3668240097F24E /* SourceViewController.swift in Sources */,
-				4D9AF8D01EB239200024D3CC /* JBURLSearchBar.swift in Sources */,
-				4D7E0B181E2D290E00A12896 /* ViewController.swift in Sources */,
-				4D7E0B161E2D290E00A12896 /* AppDelegate.swift in Sources */,
-				4DDB9BDE1E2D541D00F6D617 /* SideMenuTableView.swift in Sources */,
-				4DA824FE1E3012AD00113BB8 /* SettingsViewController.swift in Sources */,
+				D0632E7B2451736C0000B099 /* ViewController.swift in Sources */,
+				D0632E772451736C0000B099 /* AppDelegate.swift in Sources */,
+				D0632E792451736C0000B099 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4D7E0B191E2D290E00A12896 /* Main.storyboard */ = {
+		D0632E7C2451736C0000B099 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4D7E0B1A1E2D290E00A12896 /* Base */,
+				D0632E7D2451736C0000B099 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4D7E0B1E1E2D290E00A12896 /* LaunchScreen.storyboard */ = {
+		D0632E812451736D0000B099 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4D7E0B1F1E2D290E00A12896 /* Base */,
+				D0632E822451736D0000B099 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -305,33 +178,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4D7E0B221E2D290E00A12896 /* Debug */ = {
+		D0632E852451736D0000B099 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -345,43 +228,53 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4D7E0B231E2D290E00A12896 /* Release */ = {
+		D0632E862451736D0000B099 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -389,70 +282,78 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4D7E0B251E2D290E00A12896 /* Debug */ = {
+		D0632E882451736D0000B099 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E21E10FD0B239091B88D33DA /* Pods-WiBlaze.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_TEAM = 85N3S3DG8M;
 				INFOPLIST_FILE = WiBlaze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.revblaze.WiBlaze-2";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revblaze.WiBlaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4D7E0B261E2D290E00A12896 /* Release */ = {
+		D0632E892451736D0000B099 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE49E69144CB04A9545B95A0 /* Pods-WiBlaze.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_TEAM = 85N3S3DG8M;
 				INFOPLIST_FILE = WiBlaze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.revblaze.WiBlaze-2";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.revblaze.WiBlaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D7E0B0D1E2D290D00A12896 /* Build configuration list for PBXProject "WiBlaze" */ = {
+		D0632E6E2451736C0000B099 /* Build configuration list for PBXProject "WiBlaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D7E0B221E2D290E00A12896 /* Debug */,
-				4D7E0B231E2D290E00A12896 /* Release */,
+				D0632E852451736D0000B099 /* Debug */,
+				D0632E862451736D0000B099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D7E0B241E2D290E00A12896 /* Build configuration list for PBXNativeTarget "WiBlaze" */ = {
+		D0632E872451736D0000B099 /* Build configuration list for PBXNativeTarget "WiBlaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D7E0B251E2D290E00A12896 /* Debug */,
-				4D7E0B261E2D290E00A12896 /* Release */,
+				D0632E882451736D0000B099 /* Debug */,
+				D0632E892451736D0000B099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4D7E0B0A1E2D290D00A12896 /* Project object */;
+	rootObject = D0632E6B2451736C0000B099 /* Project object */;
 }

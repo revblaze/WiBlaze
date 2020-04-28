@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
-                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
                                 </wkWebViewConfiguration>
@@ -29,33 +29,48 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="HyO-Kg-Fkh" secondAttribute="bottom" id="15r-Sb-BLg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HyO-Kg-Fkh" secondAttribute="trailing" id="Mik-w5-TwU"/>
-                            <constraint firstItem="HyO-Kg-Fkh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VGc-pE-bE3"/>
+                            <constraint firstAttribute="trailing" secondItem="HyO-Kg-Fkh" secondAttribute="trailing" id="Mik-w5-TwU"/>
+                            <constraint firstItem="HyO-Kg-Fkh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VGc-pE-bE3"/>
                             <constraint firstItem="HyO-Kg-Fkh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kZd-oN-wLE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="o7Q-u9-w2s">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="arrow.left" catalog="system" id="7M0-1T-5kB">
-                            <color key="tintColor" name="Primary"/>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem image="arrow.left" catalog="system" id="7M0-1T-5kB">
+                                <color key="tintColor" name="Primary"/>
+                            </barButtonItem>
+                            <barButtonItem image="lock.shield.fill" catalog="system" id="eDX-6i-Zdv">
+                                <color key="tintColor" name="Secure"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or type URL" textAlignment="natural" minimumFontSize="17" id="JbL-Ud-Xbp">
                             <rect key="frame" x="128.5" y="5" width="157" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            <connections>
+                                <outlet property="delegate" destination="BYZ-38-t0r" id="lj8-7s-sdj"/>
+                            </connections>
                         </textField>
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="rectangle.grid.1x2" catalog="system" id="8DN-GX-ElE">
+                            <barButtonItem image="rectangle.grid.1x2" catalog="system" id="8DN-GX-ElE">
                                 <color key="tintColor" name="Primary"/>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="star" catalog="system" id="xFr-xp-C18">
+                            <barButtonItem image="star" catalog="system" id="xFr-xp-C18">
                                 <color key="tintColor" name="Primary"/>
+                                <connections>
+                                    <action selector="tempStarButtonToggle:" destination="BYZ-38-t0r" id="yor-if-Tj4"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="7M0-1T-5kB" id="Iut-L2-Br8"/>
+                        <outlet property="menuButton" destination="8DN-GX-ElE" id="gcr-Fe-Zrx"/>
+                        <outlet property="secureIcon" destination="eDX-6i-Zdv" id="Jea-UO-v7j"/>
+                        <outlet property="starButton" destination="xFr-xp-C18" id="3OJ-hf-4X3"/>
                         <outlet property="textField" destination="JbL-Ud-Xbp" id="3GB-5y-4XY"/>
                         <outlet property="webView" destination="HyO-Kg-Fkh" id="Qaf-sc-VD2"/>
                     </connections>
@@ -85,10 +100,14 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="lock.shield.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.grid.1x2" catalog="system" width="128" height="101"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="Primary">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secure">
+            <color red="0.20399999618530273" green="0.77999997138977051" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -11,52 +11,119 @@ import WebKit
 
 let defaults = UserDefaults.standard
 
-var debug = true
-var firstLoad = true
+var debug = true        // Activates debugger functions on true
+var firstLoad = true    // First Nav Load Flag (not initLoad)
 
-class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate {
+    
     // Core Elements
     @IBOutlet var webView: WKWebView!                   // Main WebView
     @IBOutlet var textField: UITextField!               // URL Search Bar
     @IBOutlet var leftNav: UIBarButtonItem!             // Left NavBar Item
     @IBOutlet var menuNav: UIBarButtonItem!             // Right NavBar Item
     @IBOutlet var progressBar: UIProgressView!          // Progress Bar Loader
+    
+    @IBOutlet var menuView: UIView!                     // TEST: Custom Menu
+    
     // WebView Observers
     var webViewURLObserver: NSKeyValueObservation?      // Observer for URL
     var webViewTitleObserver: NSKeyValueObservation?    // Observer for Page Title
     var webViewProgressObserver: NSKeyValueObservation? // Observer for Load Progress
 
+    
     override func viewDidLoad() {
+        menuView.layer.cornerRadius = 20.0      // TEST: Menu Corners
+        menuView.layer.masksToBounds = true     // TEST: Menu Mask Rules
+        
+        //self.view.tag = 1
+        //menuView.tag  = 2
+        
         super.viewDidLoad()
         
         widenTextField()            // Set TextField Width
         initWebView()               // Initialize WebView
         
+        
         // OBSERVER: WebView Progress (Detect Changes)
         webViewProgressObserver = webView.observe(\.estimatedProgress, options: .new) { [weak self] webView, change in
             self?.progressDidChange(progress: change.newValue ?? 1.0)
         }
+        
+        // TEST: Custom Menu + Outside Tap
+        menuView.alpha = 0
+        // Add "tap" press gesture recognizer
+        let tap = UITapGestureRecognizer(target: self, action: #selector(userDidInteract))
+        tap.delegate = self
+        tap.numberOfTapsRequired = 1
+        webView.addGestureRecognizer(tap)
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+      return true
+    }
+    
+    @objc func userDidInteract(gesture: UITapGestureRecognizer) {
+        menuView.fadeOut(withDuration: 0.3)
+    }
+    
+    // MARK: TEST: Menu
+    // TEST: Toggle Menu
+    @IBAction func toggleMenu(_ sender: Any) {
+        /*
+        if menuView.isHidden { menuView.isHidden = false }
+        else { menuView.isHidden = true }
+        */
+        
+        if menuView.alpha == 0 {
+            menuView.fadeIn(withDuration: 0.3)
+        } else {
+            menuView.fadeOut(withDuration: 0.3)
+        }
+    }
+    // (NOT WORKING) Reference:
+    // https://stackoverflow.com/questions/42385450/ios-how-to-hide-a-view-by-touching-anywhere-outside-of-it
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        let touch = touches.first
+        /*
+        if touch?.view != menuView { //self.view {
+            menuView.fadeOut(withDuration: 0.3)
+        }
+        */
+        next?.touchesBegan(touches, with: event)
+        
+        if touch?.view != menuView {
+            menuView.fadeOut()
+            print("Triggered")
+        } else { print("ELSE triggered") }
+        
+        /*
+        if touch?.view?.tag != 1 {
+            menuView.fadeOut(withDuration: 0.3)
+        } else {
+            print("ELSE")
+        }
+        */
     }
     
     
     
-    // MARK: Progress Change
+    // MARK: Load Progress
     func progressDidChange(progress: Double) {
         let value = Float(progress)         // Set Value as Float
-        if debug { print("Loading: \(value)") }
-        
         if value < 1 {                      // While Page Loading:
             showProgressBar(true)           // Show Progress Bar
             progressBar.progress = value    // Set Progress Value
         } else {                            // When Page is Done:
             showProgressBar(false)          // Hide Progress Bar
         }
+        if debug { print("Loading: \(value)") }
     }
     
     
     
     // MARK: NavBar Handler
-    /// Hide/show navigation bar items
+    /// (NEEDS UPDATE) Hide/show navigation bar items
     func showNavItems(_ show: Bool) {
         if show {
             leftNav.image = Glyph.secure
@@ -80,7 +147,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         Nav.left = item.id
         widenTextField()
     }
-    
+    /// Toggles between – and manages – possible actions for left nav bar item
     @IBAction func leftNavAction(_ sender: Any) {
         switch Nav.left {
         case 0:
@@ -106,9 +173,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         let url = webView.url!
-        //showLeftNav(false)
         updateNav(.close)      // showLeftNav(false)
-        print("isSearch = \(Query.isSearch)\nQuery.updateSearch = \(Query.updateSearch(url.absoluteString))")
         
         if !firstLoad { updateLiveLoad(url.absoluteString) }
         else { textField.text = "" }
@@ -144,7 +209,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         textField.resignFirstResponder()
         checkSecureAndUpdate()
     }
-    
     
     
     // MARK: WebView Setup
@@ -203,16 +267,16 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     func checkSecureAndUpdate() {
         let url = webView.url!
         if url.isSecure() { updateNav(.secure) }
-        else { updateNav(.reload) }
+        else { updateNav(Nav.getLeftNavID()) }  //else { updateNav(.reload) }
         alignText()
     }
-    
-    var loadCount = 0
+    /// Manages first launch and load, maintaining `textField` placeholder if `firstLaunch` is `true`
     func initLoadCheck() {
         if loadCount < 1 { loadCount += 1 }
         else { firstLoad = false }
         if firstLoad { textField.text = "" }
     }
+    var loadCount = 0       // DO NOT REMOVE: initLoadCheck() counter
     
     
     

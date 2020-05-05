@@ -19,9 +19,10 @@
 		D09CA88F245891B10026BF8D /* Active.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CA88E245891B10026BF8D /* Active.swift */; };
 		D09CA8912458927F0026BF8D /* Clean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CA8902458927F0026BF8D /* Clean.swift */; };
 		D09CA8932458929E0026BF8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CA8922458929E0026BF8D /* Extensions.swift */; };
-		D09CA896245893690026BF8D /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CA895245893690026BF8D /* URLHelper.swift */; };
 		D0DB0C3C2461C0560012B2EA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB0C3B2461C0560012B2EA /* Settings.swift */; };
 		D0DB0C3F2461C8720012B2EA /* NavHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB0C3E2461C8720012B2EA /* NavHandler.swift */; };
+		D0DB0C422461FD490012B2EA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB0C412461FD490012B2EA /* MenuView.swift */; };
+		D0DB0C44246203870012B2EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB0C43246203870012B2EA /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +40,10 @@
 		D09CA88E245891B10026BF8D /* Active.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Active.swift; sourceTree = "<group>"; };
 		D09CA8902458927F0026BF8D /* Clean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clean.swift; sourceTree = "<group>"; };
 		D09CA8922458929E0026BF8D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D09CA895245893690026BF8D /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
 		D0DB0C3B2461C0560012B2EA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D0DB0C3E2461C8720012B2EA /* NavHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHandler.swift; sourceTree = "<group>"; };
+		D0DB0C412461FD490012B2EA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		D0DB0C43246203870012B2EA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				D09CA87224588A150026BF8D /* AppDelegate.swift */,
 				D09CA87424588A150026BF8D /* SceneDelegate.swift */,
 				D09CA87624588A150026BF8D /* ViewController.swift */,
+				D0DB0C402461FD2F0012B2EA /* Menu */,
 				D09CA894245892BF0026BF8D /* Dynamic */,
 				D0DB0C3D2461C8600012B2EA /* Handlers */,
 				D09CA88B245891540026BF8D /* Helpers */,
@@ -104,7 +107,6 @@
 			children = (
 				D09CA8892458908A0026BF8D /* Glyphs.swift */,
 				D09CA8902458927F0026BF8D /* Clean.swift */,
-				D09CA895245893690026BF8D /* URLHelper.swift */,
 				D09CA8922458929E0026BF8D /* Extensions.swift */,
 			);
 			path = Helpers;
@@ -133,6 +135,15 @@
 				D0DB0C3E2461C8720012B2EA /* NavHandler.swift */,
 			);
 			path = Handlers;
+			sourceTree = "<group>";
+		};
+		D0DB0C402461FD2F0012B2EA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB0C412461FD490012B2EA /* MenuView.swift */,
+				D0DB0C43246203870012B2EA /* MenuViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,10 +221,11 @@
 				D09CA8912458927F0026BF8D /* Clean.swift in Sources */,
 				D09CA88D2458919E0026BF8D /* Query.swift in Sources */,
 				D09CA87724588A150026BF8D /* ViewController.swift in Sources */,
-				D09CA896245893690026BF8D /* URLHelper.swift in Sources */,
 				D0DB0C3C2461C0560012B2EA /* Settings.swift in Sources */,
 				D09CA8932458929E0026BF8D /* Extensions.swift in Sources */,
 				D09CA87324588A150026BF8D /* AppDelegate.swift in Sources */,
+				D0DB0C44246203870012B2EA /* MenuViewController.swift in Sources */,
+				D0DB0C422461FD490012B2EA /* MenuView.swift in Sources */,
 				D09CA88A2458908A0026BF8D /* Glyphs.swift in Sources */,
 				D09CA87524588A150026BF8D /* SceneDelegate.swift in Sources */,
 				D09CA88F245891B10026BF8D /* Active.swift in Sources */,
@@ -292,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -346,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

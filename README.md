@@ -1,9 +1,12 @@
 <img src="WiBlaze.png" width="860" />
 
-<b>WiBlaze</b> is an open source web browser for the iOS and macOS platforms.
+<b>WiBlaze</b> is an open-source web browser for the iOS and <a href="https://github.com/revblaze/Glow">macOS</a> platforms. <sup><a href="https://github.com/revblaze/Glow">Glow Browser for macOS</a></sup>
 
 ## Goals
 The WiBlaze web browser was built from the ground up for durability, and above all, speed. The end goal is to create a beautiful product, written in Swift.
+
+### Deprecation Note
+The following README is now out-of-date as of May 5, 2020. I will fix it up once I have a clearer roadmap planned out. I have a slew of new ideas for WiBlaze and hope to add much, much more than what is laid out below.
 
 ### Fundamental Goals
 - Joint URL-Search Bar
@@ -36,12 +39,12 @@ None as of yet.
 None as of yet.
 
 ## Requirements
-Requires iOS 9.0 or later.
-<i>Please note that the app is being built with Swift 3.</i>
+Requires iOS 13.0 or later.
+<i>Please note that the app is being built with Swift 5.2</i>
 
 ## MIT License
 
-Copyright © 2017 Justin Bush. All rights reserved.
+Copyright © 2020 Justin Bush. All rights reserved.
 
 ```
 Permission is hereby granted, free of charge, to any person obtaining a copy

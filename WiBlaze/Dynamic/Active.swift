@@ -12,8 +12,11 @@ struct Active {
     
     static var url = URL(string: "about:blank")     // Active URL
     static var urlString = url?.absoluteString      // Active URL String
+    static var baseURL = ""          // Active Base URL
     
     static var title = ""       // Active Page Title
     static var query = ""       // Active User Query
+    
+    
     
 }

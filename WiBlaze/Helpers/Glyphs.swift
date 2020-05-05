@@ -15,7 +15,10 @@ struct Glyph {
     static let menu = UIImage(named: "dots")
     
     // System Glyphs
+    static let back = UIImage(systemName: "arrow.left")
     static let secure = UIImage(systemName: "lock.shield.fill")
+    static let reload = UIImage(systemName: "arrow.clockwise")
+    static let close = UIImage(systemName: "xmark.square")
     
 }
 

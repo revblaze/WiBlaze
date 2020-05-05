@@ -37,7 +37,7 @@ struct Query {
             return searchString.toURL()
         }
     }
-    
+    /// Adds `https://` to URL `String` if needed and returns final value as `URL`
     static func needsHTTPS(_ query: String) -> URL {
         var urlString = "about:blank"
         if !query.contains("//") { urlString = "https://\(query)" }
@@ -49,7 +49,7 @@ struct Query {
         return urlString.toURL()
             //return query.toURL()
     }
-    
+    /// Sets `isSearch` and returns `true` if valid search query
     static func updateSearch(_ query: String) -> Bool {
         if query.contains("google") && query.contains("search?q=") {
             isSearch = true
@@ -59,7 +59,20 @@ struct Query {
             return false
         }
     }
+    /**
+    Takes input URL and returns the base URL as a `String`
+     - Parameters:
+        - url: ie. `https://www.google.com/`
+     - Returns: ie. `google.com`
+     */
+    static func toBase(_ url: URL) -> String {
+        var baseString = url.host
+        baseString = baseString?.replacingOccurrences(of: "www.", with: "")
+        Active.baseURL = baseString ?? ""
+        return baseString ?? ""
+    }
     
+    //static func
     
     
 }

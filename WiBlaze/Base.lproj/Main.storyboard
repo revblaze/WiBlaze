@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQW-19-6ra">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ee8-8H-Grc">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HyO-Kg-Fkh">
+                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9fg-OI-dW6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
@@ -25,86 +25,80 @@
                                     <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KXy-Yp-3Nd">
+                                <rect key="frame" x="-2" y="88" width="418" height="2"/>
+                            </progressView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="HyO-Kg-Fkh" secondAttribute="bottom" id="15r-Sb-BLg"/>
-                            <constraint firstAttribute="trailing" secondItem="HyO-Kg-Fkh" secondAttribute="trailing" id="Mik-w5-TwU"/>
-                            <constraint firstItem="HyO-Kg-Fkh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VGc-pE-bE3"/>
-                            <constraint firstItem="HyO-Kg-Fkh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kZd-oN-wLE"/>
+                            <constraint firstAttribute="bottom" secondItem="9fg-OI-dW6" secondAttribute="bottom" id="1LL-fs-uyw"/>
+                            <constraint firstItem="9fg-OI-dW6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SMB-ua-gY0"/>
+                            <constraint firstItem="KXy-Yp-3Nd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-2" id="ZhB-0K-ewx"/>
+                            <constraint firstItem="9fg-OI-dW6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gzu-JX-k5H"/>
+                            <constraint firstAttribute="trailing" secondItem="9fg-OI-dW6" secondAttribute="trailing" id="jDY-H4-9pZ"/>
+                            <constraint firstItem="KXy-Yp-3Nd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kdP-Pe-G8a"/>
+                            <constraint firstAttribute="trailing" secondItem="KXy-Yp-3Nd" secondAttribute="trailing" constant="-2" id="nf7-Za-PFh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="o7Q-u9-w2s">
+                    <navigationItem key="navigationItem" id="5z2-cv-PGf">
                         <nil key="title"/>
-                        <leftBarButtonItems>
-                            <barButtonItem image="arrow.left" catalog="system" id="7M0-1T-5kB">
-                                <color key="tintColor" name="Primary"/>
-                            </barButtonItem>
-                            <barButtonItem image="lock.shield.fill" catalog="system" id="eDX-6i-Zdv">
-                                <color key="tintColor" name="Secure"/>
-                            </barButtonItem>
-                        </leftBarButtonItems>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or type URL" textAlignment="natural" minimumFontSize="17" id="JbL-Ud-Xbp">
-                            <rect key="frame" x="128.5" y="5" width="157" height="34"/>
+                        <barButtonItem key="leftBarButtonItem" image="lock.shield.fill" catalog="system" id="rM9-ZL-fau">
+                            <color key="tintColor" name="Secure"/>
+                        </barButtonItem>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or type URL" textAlignment="natural" minimumFontSize="17" id="Dqe-QA-mfz">
+                            <rect key="frame" x="114.5" y="5" width="185" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="textColor" name="Primary"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             <connections>
-                                <outlet property="delegate" destination="BYZ-38-t0r" id="lj8-7s-sdj"/>
+                                <outlet property="delegate" destination="BYZ-38-t0r" id="Hpi-DK-MdR"/>
                             </connections>
                         </textField>
-                        <rightBarButtonItems>
-                            <barButtonItem image="rectangle.grid.1x2" catalog="system" id="8DN-GX-ElE">
-                                <color key="tintColor" name="Primary"/>
-                            </barButtonItem>
-                            <barButtonItem image="star" catalog="system" id="xFr-xp-C18">
-                                <color key="tintColor" name="Primary"/>
-                                <connections>
-                                    <action selector="tempStarButtonToggle:" destination="BYZ-38-t0r" id="yor-if-Tj4"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="dots" id="0Fz-zr-ORR">
+                            <color key="tintColor" name="Primary"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="backButton" destination="7M0-1T-5kB" id="Iut-L2-Br8"/>
-                        <outlet property="menuButton" destination="8DN-GX-ElE" id="gcr-Fe-Zrx"/>
-                        <outlet property="secureIcon" destination="eDX-6i-Zdv" id="Jea-UO-v7j"/>
-                        <outlet property="starButton" destination="xFr-xp-C18" id="3OJ-hf-4X3"/>
-                        <outlet property="textField" destination="JbL-Ud-Xbp" id="3GB-5y-4XY"/>
-                        <outlet property="webView" destination="HyO-Kg-Fkh" id="Qaf-sc-VD2"/>
+                        <outlet property="backNav" destination="rM9-ZL-fau" id="5Nk-6A-Swd"/>
+                        <outlet property="menuNav" destination="0Fz-zr-ORR" id="xdq-bK-RE1"/>
+                        <outlet property="progressBar" destination="KXy-Yp-3Nd" id="sAf-7I-pcR"/>
+                        <outlet property="textField" destination="Dqe-QA-mfz" id="wQw-sZ-1Z3"/>
+                        <outlet property="webView" destination="9fg-OI-dW6" id="Dji-dF-dAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="138"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="oRg-o6-FP6">
+        <scene sceneID="UqJ-g8-C9s">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UQW-19-6ra" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ee8-8H-Grc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BvE-dJ-u9d">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fCX-oC-fet">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ljw-rb-6nB"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Y77-pF-o8I"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3v3-yo-c1C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTZ-8w-Pew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="dots" width="23" height="23"/>
         <image name="lock.shield.fill" catalog="system" width="128" height="121"/>
-        <image name="rectangle.grid.1x2" catalog="system" width="128" height="101"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Primary">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
         <namedColor name="Secure">
             <color red="0.20399999618530273" green="0.77999997138977051" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -1,5 +1,7 @@
 <img src="Cover.jpg" width="860" />
 
+<a href="https://github.com/revblaze/WiBlaze/tree/wiblaze/menu"><img src="Menu.jpg" width="860" /></a>
+
 <b>WiBlaze</b> is an open-source web browser for the iOS and <a href="https://github.com/revblaze/Glow">macOS</a> platforms. <sup><a href="https://github.com/revblaze/Glow">Glow Browser for macOS</a></sup>
 
 ## Goals

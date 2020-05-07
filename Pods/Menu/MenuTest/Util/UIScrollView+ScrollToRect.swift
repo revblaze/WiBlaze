@@ -13,7 +13,7 @@ import UIKit
 // but it often just doesn't work and I haven't looked into why
 
 @objc public extension UIScrollView {
-    @objc public func scrollOffset(for rect: CGRect) -> CGPoint {
+    @objc func scrollOffset(for rect: CGRect) -> CGPoint {
         //Compute the visible area of the scroll view
         var visibleArea = convert(bounds, to: self)
         
@@ -65,7 +65,7 @@ import UIKit
         return newOffset
     }
     
-    @objc public func scroll(toVisible rect: CGRect, animated: Bool) {
+    @objc func scroll(toVisible rect: CGRect, animated: Bool) {
 
         let newOffset = scrollOffset(for: rect)
         

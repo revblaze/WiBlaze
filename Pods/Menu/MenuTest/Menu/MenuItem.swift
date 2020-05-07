@@ -32,7 +32,7 @@ public struct SeparatorMenuItem: Equatable, MenuItem {
 }
 
 public extension UIKeyModifierFlags {
-    public var symbols: [String] {
+    var symbols: [String] {
         var result: [String] = []
         
         if contains(.alternate) {
@@ -94,7 +94,7 @@ public struct ShortcutMenuItem: Equatable, MenuItem {
 }
 
 public extension ShortcutMenuItem {
-    public var keyCommand: UIKeyCommand? {
+    var keyCommand: UIKeyCommand? {
         //TODO: Needs updating
 //        if let shortcut = shortcut {
 //            return UIKeyCommand(input: shortcut.key, modifierFlags: shortcut.modifiers, action: action, discoverabilityTitle: shortcut.title)

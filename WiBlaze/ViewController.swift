@@ -14,7 +14,8 @@ let defaults = UserDefaults.standard
 var debug = true        // Activates debugger functions on true
 var firstLoad = true    // First Nav Load Flag (not initLoad)
 
-class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate, UIContextMenuInteractionDelegate, Menu {
+    
     
     // Core Elements
     @IBOutlet var webView: WKWebView!                   // Main WebView
@@ -32,16 +33,17 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
 
     
     override func viewDidLoad() {
-        menuView.layer.cornerRadius = 20.0      // TEST: Menu Corners
-        menuView.layer.masksToBounds = true     // TEST: Menu Mask Rules
-        
-        //self.view.tag = 1
-        //menuView.tag  = 2
         
         super.viewDidLoad()
         
         widenTextField()            // Set TextField Width
         initWebView()               // Initialize WebView
+        
+        
+        // Context Menu Setup
+        //let interaction = UIContextMenuInteraction(delegate: self)
+        //menuNav.target?.addInteraction(interaction)
+        //menuNav.target?.isUserInteractionEnabled = true
         
         
         // OBSERVER: WebView Progress (Detect Changes)
@@ -58,6 +60,10 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         webView.addGestureRecognizer(tap)
     }
     
+    
+    
+    // MARK: TEST: Menu
+    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
       return true
     }
@@ -66,45 +72,17 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         menuView.fadeOut(withDuration: 0.3)
     }
     
-    // MARK: TEST: Menu
+    func showMenu(_ show: Bool) {
+        if show { menuView.fadeIn(withDuration: 0.3) }
+        else { menuView.fadeOut(withDuration: 0.3) }
+    }
+    
     // TEST: Toggle Menu
     @IBAction func toggleMenu(_ sender: Any) {
-        /*
-        if menuView.isHidden { menuView.isHidden = false }
-        else { menuView.isHidden = true }
-        */
-        
-        if menuView.alpha == 0 {
-            menuView.fadeIn(withDuration: 0.3)
-        } else {
-            menuView.fadeOut(withDuration: 0.3)
-        }
+        if menuView.alpha == 0 { showMenu(true) }
+        else { showMenu(false) }
     }
-    // (NOT WORKING) Reference:
-    // https://stackoverflow.com/questions/42385450/ios-how-to-hide-a-view-by-touching-anywhere-outside-of-it
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        let touch = touches.first
-        /*
-        if touch?.view != menuView { //self.view {
-            menuView.fadeOut(withDuration: 0.3)
-        }
-        */
-        next?.touchesBegan(touches, with: event)
-        
-        if touch?.view != menuView {
-            menuView.fadeOut()
-            print("Triggered")
-        } else { print("ELSE triggered") }
-        
-        /*
-        if touch?.view?.tag != 1 {
-            menuView.fadeOut(withDuration: 0.3)
-        } else {
-            print("ELSE")
-        }
-        */
-    }
+    
     
     
     
@@ -294,6 +272,39 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
             textField.textAlignment = .left
         } else {
             textField.textAlignment = .center
+        }
+    }
+    
+    
+    
+    // MARK: Context Menu
+    func createContextMenu() -> UIMenu {
+        let shareAction = UIAction(title: "Share", image: UIImage(systemName: "square.and.arrow.up")) { _ in
+            print("Share")
+        }
+        let copy = UIAction(title: "Copy", image: UIImage(systemName: "doc.on.doc")) { _ in
+            print("Copy")
+        }
+        let saveToPhotos = UIAction(title: "Add To Photos", image: UIImage(systemName: "photo")) { _ in
+            print("Save to Photos") }
+        return UIMenu(title: "", children: [shareAction, copy, saveToPhotos])
+    }
+    
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ -> UIMenu? in
+            return self.createContextMenu()
+        }
+    }
+    
+    
+    
+    // MARK: Segue Manager
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if debug { print("Segue Performed for: \(segue)") }
+        if segue.identifier == "MenuSegue" {
+            //let menu = segue.destinationController as! MenuViewController
+            let menu =  segue.destination as! MenuViewController
+            menu.delegate = self
         }
     }
     

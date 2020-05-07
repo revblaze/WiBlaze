@@ -1,0 +1,20 @@
+PODS:
+  - Menu (0.0.1):
+    - SnapKit
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Menu
+
+SPEC REPOS:
+  trunk:
+    - Menu
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Menu: a1e69a2e8e641192ddec0cf55cd380cde6e27b1e
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: ccdf24ff27d21c016e335163d207b82b4acf32af
+
+COCOAPODS: 1.8.4

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,11 +21,12 @@
 		D09CA8932458929E0026BF8D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09CA8922458929E0026BF8D /* Extensions.swift */; };
 		D0DB0C3C2461C0560012B2EA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB0C3B2461C0560012B2EA /* Settings.swift */; };
 		D0DB0C3F2461C8720012B2EA /* NavHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB0C3E2461C8720012B2EA /* NavHandler.swift */; };
-		D0DB0C422461FD490012B2EA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB0C412461FD490012B2EA /* MenuView.swift */; };
-		D0DB0C44246203870012B2EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB0C43246203870012B2EA /* MenuViewController.swift */; };
+		DC6F2B8E6AA5722DE2019E7C /* Pods_WiBlaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF119C1AD5EA80B14D26FBB5 /* Pods_WiBlaze.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4775C7342D83CCC571D1416A /* Pods-WiBlaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiBlaze.debug.xcconfig"; path = "Target Support Files/Pods-WiBlaze/Pods-WiBlaze.debug.xcconfig"; sourceTree = "<group>"; };
+		C395FA0213C7F1A3F07C0291 /* Pods-WiBlaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiBlaze.release.xcconfig"; path = "Target Support Files/Pods-WiBlaze/Pods-WiBlaze.release.xcconfig"; sourceTree = "<group>"; };
 		D09CA86F24588A150026BF8D /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09CA87224588A150026BF8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D09CA87424588A150026BF8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +43,7 @@
 		D09CA8922458929E0026BF8D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0DB0C3B2461C0560012B2EA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D0DB0C3E2461C8720012B2EA /* NavHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHandler.swift; sourceTree = "<group>"; };
-		D0DB0C412461FD490012B2EA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		D0DB0C43246203870012B2EA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		FF119C1AD5EA80B14D26FBB5 /* Pods_WiBlaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiBlaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D09CA88824588F5C0026BF8D /* WebKit.framework in Frameworks */,
+				DC6F2B8E6AA5722DE2019E7C /* Pods_WiBlaze.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +65,7 @@
 				D09CA87124588A150026BF8D /* WiBlaze */,
 				D09CA87024588A150026BF8D /* Products */,
 				D09CA88624588F5C0026BF8D /* Frameworks */,
+				D2A2C0AB200D7271DEE474D5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +83,6 @@
 				D09CA87224588A150026BF8D /* AppDelegate.swift */,
 				D09CA87424588A150026BF8D /* SceneDelegate.swift */,
 				D09CA87624588A150026BF8D /* ViewController.swift */,
-				D0DB0C402461FD2F0012B2EA /* Menu */,
 				D09CA894245892BF0026BF8D /* Dynamic */,
 				D0DB0C3D2461C8600012B2EA /* Handlers */,
 				D09CA88B245891540026BF8D /* Helpers */,
@@ -98,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D09CA88724588F5C0026BF8D /* WebKit.framework */,
+				FF119C1AD5EA80B14D26FBB5 /* Pods_WiBlaze.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,13 +139,13 @@
 			path = Handlers;
 			sourceTree = "<group>";
 		};
-		D0DB0C402461FD2F0012B2EA /* Menu */ = {
+		D2A2C0AB200D7271DEE474D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D0DB0C412461FD490012B2EA /* MenuView.swift */,
-				D0DB0C43246203870012B2EA /* MenuViewController.swift */,
+				4775C7342D83CCC571D1416A /* Pods-WiBlaze.debug.xcconfig */,
+				C395FA0213C7F1A3F07C0291 /* Pods-WiBlaze.release.xcconfig */,
 			);
-			path = Menu;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D09CA88324588A170026BF8D /* Build configuration list for PBXNativeTarget "WiBlaze" */;
 			buildPhases = (
+				1F41630B8C35B01DCEB3E901 /* [CP] Check Pods Manifest.lock */,
 				D09CA86B24588A150026BF8D /* Sources */,
 				D09CA86C24588A150026BF8D /* Frameworks */,
 				D09CA86D24588A150026BF8D /* Resources */,
+				B2A190AD821493DF3176F610 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +216,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F41630B8C35B01DCEB3E901 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WiBlaze-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2A190AD821493DF3176F610 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WiBlaze/Pods-WiBlaze-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WiBlaze/Pods-WiBlaze-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WiBlaze/Pods-WiBlaze-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D09CA86B24588A150026BF8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -224,8 +270,6 @@
 				D0DB0C3C2461C0560012B2EA /* Settings.swift in Sources */,
 				D09CA8932458929E0026BF8D /* Extensions.swift in Sources */,
 				D09CA87324588A150026BF8D /* AppDelegate.swift in Sources */,
-				D0DB0C44246203870012B2EA /* MenuViewController.swift in Sources */,
-				D0DB0C422461FD490012B2EA /* MenuView.swift in Sources */,
 				D09CA88A2458908A0026BF8D /* Glyphs.swift in Sources */,
 				D09CA87524588A150026BF8D /* SceneDelegate.swift in Sources */,
 				D09CA88F245891B10026BF8D /* Active.swift in Sources */,
@@ -370,6 +414,7 @@
 		};
 		D09CA88424588A170026BF8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4775C7342D83CCC571D1416A /* Pods-WiBlaze.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -390,6 +435,7 @@
 		};
 		D09CA88524588A170026BF8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C395FA0213C7F1A3F07C0291 /* Pods-WiBlaze.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

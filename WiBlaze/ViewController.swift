@@ -8,23 +8,24 @@
 
 import UIKit
 import WebKit
+import SnapKit
+import Menu
 
 let defaults = UserDefaults.standard
 
 var debug = true        // Activates debugger functions on true
 var firstLoad = true    // First Nav Load Flag (not initLoad)
 
-class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate, UIContextMenuInteractionDelegate, Menu {
+class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITextFieldDelegate {
     
     
     // Core Elements
     @IBOutlet var webView: WKWebView!                   // Main WebView
     @IBOutlet var textField: UITextField!               // URL Search Bar
     @IBOutlet var leftNav: UIBarButtonItem!             // Left NavBar Item
-    @IBOutlet var menuNav: UIBarButtonItem!             // Right NavBar Item
     @IBOutlet var progressBar: UIProgressView!          // Progress Bar Loader
     
-    @IBOutlet var menuView: UIView!                     // TEST: Custom Menu
+    @IBOutlet var customMenuView: UIView!
     
     // WebView Observers
     var webViewURLObserver: NSKeyValueObservation?      // Observer for URL
@@ -39,11 +40,104 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         widenTextField()            // Set TextField Width
         initWebView()               // Initialize WebView
         
+        /*
+        var userTheme = LightMenuTheme()
+        if traitCollection.userInterfaceStyle == .light {
+            userTheme = LightMenuTheme()
+        } else {
+            userTheme = DarkMenuTheme()
+        }
+         */
+ 
+        let menu = MenuView(title: "≡", theme: LightMenuTheme()) { [weak self] () -> [MenuItem] in
+        //let menu = MenuView(title: "≡", theme: DarkMenuTheme()) { [weak self] () -> [MenuItem] in
+            return [
+                ShortcutMenuItem(name: "Back", shortcut: (.command, "["), action: {
+                    [weak self] in
+                    self?.webView.goBack()
+                }),
+                
+                ShortcutMenuItem(name: "Forward", shortcut: (.command, "]"), action: {
+                    [weak self] in
+                    self?.webView.goForward()
+                }),
+                
+                ShortcutMenuItem(name: "Refresh", shortcut: (.command, "R"), action: {
+                    [weak self] in
+                    self?.webView.reload()
+                }),
+                
+                ShortcutMenuItem(name: "Home", shortcut: (.command, "H"), action: {
+                    [weak self] in
+                    self?.webView.load("https://google.com")
+                }),
+                
+                SeparatorMenuItem(),
+                
+                ShortcutMenuItem(name: "Copy", shortcut: (.command, "C"), action: {
+                    [weak self] in
+                    let pasteboard = UIPasteboard.general
+                    pasteboard.string = self?.textField.text
+                }),
+                
+                ShortcutMenuItem(name: "Share", shortcut: (.command, "S"), action: {
+                    [weak self] in
+                    print("SHARE PAGE")
+                }),
+                
+                ShortcutMenuItem(name: "Bookmark", shortcut: (.command, "B"), action: {
+                    [weak self] in
+                    print("ADD TO BOOKMARK")
+                }),
+                
+                ShortcutMenuItem(name: "Print", shortcut: (.command, "P"), action: {
+                    [weak self] in
+                    print("PRINT PAGE")
+                }),
+                
+                SeparatorMenuItem(),
+                
+                ShortcutMenuItem(name: "Developer", shortcut: (.command, "X"), action: {
+                    [weak self] in
+                    print("ADD TO BOOKMARK")
+                }),
+                
+                ShortcutMenuItem(name: "Preferences", shortcut: (.command, ","), action: {
+                    [weak self] in
+                    print("OPEN SETTINGS")
+                }),
+            ]
+        }
         
-        // Context Menu Setup
-        //let interaction = UIContextMenuInteraction(delegate: self)
-        //menuNav.target?.addInteraction(interaction)
-        //menuNav.target?.isUserInteractionEnabled = true
+        customMenuView.addSubview(menu)
+        /*
+        customMenuView.tintColor = UIColor.white
+        menu.applyTheme(DarkMenuTheme())
+        menu.tintColor = UIColor.white
+        menu.tintColorDidChange()
+        */
+        
+        //view.addSubview(menu)
+        /*
+        let navBar = navigationController?.navigationBar as UINavigationBar?
+        menuNav.customView?.addSubview(menu)
+        */
+        
+        if traitCollection.userInterfaceStyle == .light {
+            menu.tintColor = .black
+        } else {
+            menu.tintColor = .white
+        }
+        
+        menu.snp.makeConstraints {
+            make in
+            
+            make.center.equalToSuperview()
+            
+            //Menus don't have an intrinsic height
+            make.height.equalTo(40)
+        }
+        
         
         
         // OBSERVER: WebView Progress (Detect Changes)
@@ -51,36 +145,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
             self?.progressDidChange(progress: change.newValue ?? 1.0)
         }
         
-        // TEST: Custom Menu + Outside Tap
-        menuView.alpha = 0
-        // Add "tap" press gesture recognizer
-        let tap = UITapGestureRecognizer(target: self, action: #selector(userDidInteract))
-        tap.delegate = self
-        tap.numberOfTapsRequired = 1
-        webView.addGestureRecognizer(tap)
-    }
-    
-    
-    
-    // MARK: TEST: Menu
-    
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-      return true
-    }
-    
-    @objc func userDidInteract(gesture: UITapGestureRecognizer) {
-        menuView.fadeOut(withDuration: 0.3)
-    }
-    
-    func showMenu(_ show: Bool) {
-        if show { menuView.fadeIn(withDuration: 0.3) }
-        else { menuView.fadeOut(withDuration: 0.3) }
-    }
-    
-    // TEST: Toggle Menu
-    @IBAction func toggleMenu(_ sender: Any) {
-        if menuView.alpha == 0 { showMenu(true) }
-        else { showMenu(false) }
+
     }
     
     
@@ -105,10 +170,10 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     func showNavItems(_ show: Bool) {
         if show {
             leftNav.image = Glyph.secure
-            menuNav.image = Glyph.menu
+            //menuNav.image = Glyph.menu
         } else {
             leftNav.image = nil
-            menuNav.image = nil
+            //menuNav.image = nil
         }
         widenTextField()
     }
@@ -299,6 +364,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     
     // MARK: Segue Manager
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if debug { print("Segue Performed for: \(segue)") }
         if segue.identifier == "MenuSegue" {
@@ -306,7 +372,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
             let menu =  segue.destination as! MenuViewController
             menu.delegate = self
         }
-    }
+    }*/
     
     
     
@@ -325,6 +391,10 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         var frame: CGRect? = textField?.frame
         frame?.size.width = 10000
         textField?.frame = frame!
+        
+        var menuFrame: CGRect = customMenuView.frame
+        menuFrame.size.width = 40
+        customMenuView.frame = menuFrame
     }
 
 

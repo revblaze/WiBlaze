@@ -10,10 +10,8 @@ import Foundation
 
 struct Browser {
     
-    
     // MARK: Browser Properties
     static let name = "WiBlaze"
-    
     static let defaultHome = URL(string: "https://google.com")
     
     // UserAgents
@@ -25,3 +23,4 @@ struct Browser {
     static let padUserAgent    = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15"
     
 }
+

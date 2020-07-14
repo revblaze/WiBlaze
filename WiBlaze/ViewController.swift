@@ -72,16 +72,23 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     
     // MARK:- Circle Menu
+    
+    // Option 1: Home,     Refresh,   Fav/Save & Share,   History & Bookmarks,   Actions,           Settings
+    // Option 2: Home,     Refresh,   Fav/Save,           History & Bookmarks,   Share & Actions,   Settings *
+    // Colors 1: Orange,   Blue,      Red,                Purple,                Green,             Gray
+    // Colors 2: Purple,   Blue,      Red,                Orange,                Green,             Gray     *
+    // ACTIONS: Different from ShareSheet; Actions will allow you to manipulate the content of the Web Browser (ie. view source code, request desktop site, JavaScript console with injection, etc.)
+    
     //    let colors = [UIColor.redColor(), UIColor.grayColor(), UIColor.greenColor(), UIColor.purpleColor()]
     let items: [(icon: String, color: UIColor)] = [
-        ("menu_home", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
-        ("menu_settings", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
-        ("menu_home", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),
-        ("menu_settings", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),
-        ("menu_settings", UIColor(red: 1, green: 0.39, blue: 0, alpha: 1))
+        ("menu_home", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),          // Home
+        ("menu_settings", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),      // Refresh
+        ("menu_home", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),       // Favourite
+        ("menu_settings", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),      // History/Bookmarks
+        ("menu_home", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),       // Share/Action
+        ("menu_settings", UIColor(red: 1, green: 0.39, blue: 0, alpha: 1))          // Settings
     ]
     
-    // Toggle show/hide CircleMenu
     /**
      Toggle CircleMenu to hide or show, with optional animation
      - Parameters:

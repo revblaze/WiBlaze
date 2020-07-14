@@ -1,8 +1,8 @@
 //
 //  Clean.swift
-//  WiBlaze
+//  UWeb
 //
-//  Created by Justin Bush on 2020-04-28.
+//  Created by Justin Bush on 2020-07-08.
 //  Copyright © 2020 Justin Bush. All rights reserved.
 //
 
@@ -17,17 +17,6 @@ struct Clean {
         let brackets: Set<Character> = ["(", ")"]
         url.removeAll(where: { brackets.contains($0) })
         return url
-    }
-
-    static func title(_ string: String) {
-        
-    }
-    
-    static func string(_ string: String) -> String {
-        var clean = string.replacingOccurrences(of: "Optional", with: "")
-        let brackets: Set<Character> = ["(", ")", "\""]
-        clean.removeAll(where: { brackets.contains($0) })
-        return clean
     }
     
 }

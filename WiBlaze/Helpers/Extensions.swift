@@ -130,6 +130,23 @@ public extension UIView {
       })
   }
 
-}
+    func pauseAnimation(delay: Double) {
+        let time = delay + CFAbsoluteTimeGetCurrent()
+        let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, time, 0, 0, 0, { timer in
+            let layer = self.layer
+            let pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
+            layer.speed = 0.0
+            layer.timeOffset = pausedTime
+        })
+        CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, CFRunLoopMode.commonModes)
+    }
 
+    func resumeAnimation() {
+        let pausedTime  = layer.timeOffset
+
+        layer.speed = 1.0
+        layer.timeOffset = 0.0
+        layer.beginTime = layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
+    }
+}
 

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 
 struct Glyph {
     
@@ -19,6 +18,23 @@ struct Glyph {
     static let secure = UIImage(systemName: "lock.shield.fill")
     static let reload = UIImage(systemName: "arrow.clockwise")
     static let close = UIImage(systemName: "xmark.square")
+    static let deleteBack = UIImage(systemName: "delete.left")
+    
+    //MARK:- Settings Glyphs
+    
+    // Dark Mode
+    static let moonOFF = UIImage(systemName: "moon")
+    static let moonON = UIImage(systemName: "moon.fill")
+    static func getMoonIcon() -> UIImage {
+        if Settings.darkMode { return moonON! }
+        else { return moonOFF! }
+    }
+    
+}
+
+struct GlyphColor {
+    
+    static let bw = UIColor.init(named: "BlackWhite")
     
 }
 

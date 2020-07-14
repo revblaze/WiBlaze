@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ee8-8H-Grc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ee8-8H-Grc">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,6 +36,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="9fg-OI-dW6" secondAttribute="bottom" id="1LL-fs-uyw"/>
@@ -49,7 +51,6 @@
                             <constraint firstAttribute="trailing" secondItem="KXy-Yp-3Nd" secondAttribute="trailing" constant="-2" id="nf7-Za-PFh"/>
                             <constraint firstItem="ei6-9y-gwv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qZd-Hu-ubO"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="5z2-cv-PGf">
                         <nil key="title"/>
@@ -141,6 +142,7 @@
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="GUE-f6-oUa"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="sXD-5I-fxg" secondAttribute="trailing" constant="8" id="bcc-Of-zQb"/>
@@ -154,12 +156,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcE-eW-iBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="168"/>
+            <point key="canvasLocation" x="1788" y="138"/>
         </scene>
     </scenes>
     <resources>
         <image name="dots" width="23" height="23"/>
-        <image name="lock.shield.fill" catalog="system" width="128" height="121"/>
+        <image name="lock.shield.fill" catalog="system" width="128" height="115"/>
         <namedColor name="Background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

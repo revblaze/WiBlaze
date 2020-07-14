@@ -18,6 +18,9 @@
 		C2A437D524BDF7DE0057E294 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437D124BDF7DE0057E294 /* Extensions.swift */; };
 		C2A437D624BDF7DE0057E294 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437D224BDF7DE0057E294 /* Device.swift */; };
 		C2A437D724BDF7DE0057E294 /* Glyphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437D324BDF7DE0057E294 /* Glyphs.swift */; };
+		C2A437DF24BDFFA60057E294 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437DA24BDFFA60057E294 /* CircleMenu.swift */; };
+		C2A437E024BDFFA60057E294 /* CircleMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437DC24BDFFA60057E294 /* CircleMenuLoader.swift */; };
+		C2A437E124BDFFA60057E294 /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437DE24BDFFA60057E294 /* CircleMenuButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		C2A437D124BDF7DE0057E294 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C2A437D224BDF7DE0057E294 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		C2A437D324BDF7DE0057E294 /* Glyphs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glyphs.swift; sourceTree = "<group>"; };
+		C2A437DA24BDFFA60057E294 /* CircleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenu.swift; sourceTree = "<group>"; };
+		C2A437DC24BDFFA60057E294 /* CircleMenuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuLoader.swift; sourceTree = "<group>"; };
+		C2A437DE24BDFFA60057E294 /* CircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				C2A437BE24BDF1860057E294 /* Main.storyboard */,
 				C2A437C124BDF1880057E294 /* Assets.xcassets */,
 				C2A437CF24BDF7DE0057E294 /* Helpers */,
+				C2A437D824BDFFA60057E294 /* Libraries */,
 				C2A437C324BDF1880057E294 /* LaunchScreen.storyboard */,
 				C2A437C624BDF1880057E294 /* Info.plist */,
 			);
@@ -97,6 +104,40 @@
 				C2A437D324BDF7DE0057E294 /* Glyphs.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C2A437D824BDFFA60057E294 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C2A437D924BDFFA60057E294 /* CircleMenuLib */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		C2A437D924BDFFA60057E294 /* CircleMenuLib */ = {
+			isa = PBXGroup;
+			children = (
+				C2A437DA24BDFFA60057E294 /* CircleMenu.swift */,
+				C2A437DB24BDFFA60057E294 /* CircleMenuLoader */,
+				C2A437DD24BDFFA60057E294 /* CircleMenuButton */,
+			);
+			path = CircleMenuLib;
+			sourceTree = "<group>";
+		};
+		C2A437DB24BDFFA60057E294 /* CircleMenuLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C2A437DC24BDFFA60057E294 /* CircleMenuLoader.swift */,
+			);
+			path = CircleMenuLoader;
+			sourceTree = "<group>";
+		};
+		C2A437DD24BDFFA60057E294 /* CircleMenuButton */ = {
+			isa = PBXGroup;
+			children = (
+				C2A437DE24BDFFA60057E294 /* CircleMenuButton.swift */,
+			);
+			path = CircleMenuButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +213,14 @@
 			files = (
 				C2A437D524BDF7DE0057E294 /* Extensions.swift in Sources */,
 				C2A437BD24BDF1860057E294 /* ViewController.swift in Sources */,
+				C2A437DF24BDFFA60057E294 /* CircleMenu.swift in Sources */,
 				C2A437D724BDF7DE0057E294 /* Glyphs.swift in Sources */,
 				C2A437D424BDF7DE0057E294 /* Clean.swift in Sources */,
 				C2A437D624BDF7DE0057E294 /* Device.swift in Sources */,
 				C2A437B924BDF1860057E294 /* AppDelegate.swift in Sources */,
 				C2A437BB24BDF1860057E294 /* SceneDelegate.swift in Sources */,
+				C2A437E124BDFFA60057E294 /* CircleMenuButton.swift in Sources */,
+				C2A437E024BDFFA60057E294 /* CircleMenuLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

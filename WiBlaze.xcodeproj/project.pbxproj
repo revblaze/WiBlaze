@@ -21,7 +21,6 @@
 		C2A437DF24BDFFA60057E294 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437DA24BDFFA60057E294 /* CircleMenu.swift */; };
 		C2A437E024BDFFA60057E294 /* CircleMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437DC24BDFFA60057E294 /* CircleMenuLoader.swift */; };
 		C2A437E124BDFFA60057E294 /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437DE24BDFFA60057E294 /* CircleMenuButton.swift */; };
-		C2A437E424BE12860057E294 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E324BE12860057E294 /* Client.swift */; };
 		C2A437E624BE12AA0057E294 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E524BE12AA0057E294 /* Browser.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,6 @@
 		C2A437DA24BDFFA60057E294 /* CircleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenu.swift; sourceTree = "<group>"; };
 		C2A437DC24BDFFA60057E294 /* CircleMenuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuLoader.swift; sourceTree = "<group>"; };
 		C2A437DE24BDFFA60057E294 /* CircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuButton.swift; sourceTree = "<group>"; };
-		C2A437E324BE12860057E294 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		C2A437E524BE12AA0057E294 /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				C2A437E524BE12AA0057E294 /* Browser.swift */,
-				C2A437E324BE12860057E294 /* Client.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 				C2A437BD24BDF1860057E294 /* ViewController.swift in Sources */,
 				C2A437DF24BDFFA60057E294 /* CircleMenu.swift in Sources */,
 				C2A437D724BDF7DE0057E294 /* Glyphs.swift in Sources */,
-				C2A437E424BE12860057E294 /* Client.swift in Sources */,
 				C2A437D424BDF7DE0057E294 /* Clean.swift in Sources */,
 				C2A437D624BDF7DE0057E294 /* Device.swift in Sources */,
 				C2A437B924BDF1860057E294 /* AppDelegate.swift in Sources */,

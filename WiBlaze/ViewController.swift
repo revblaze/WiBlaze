@@ -37,6 +37,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     
     
+    
     // MARK:- WebView
     func initWebView() {
         webView.uiDelegate = self
@@ -60,6 +61,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
 
     
     
+    
     // MARK:- Navigation Bar
     
     /// Prompts the CircleMenu handler to manage display
@@ -68,6 +70,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         if hiddenMenu { circleMenuButton.onTap() }
         showMenu(hiddenMenu, withAnimation: !hiddenMenu)
     }
+    
     
     
     
@@ -115,17 +118,17 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     }
 
     func circleMenu(_: CircleMenu, buttonWillSelected _: UIButton, atIndex: Int) {
-        if debug { print("Menu: button will selected: \(atIndex)") }
+        printDebug("Menu: button will selected: \(atIndex)")
         showMenu(false, withAnimation: false)
     }
 
     func circleMenu(_: CircleMenu, buttonDidSelected _: UIButton, atIndex: Int) {
-        if debug { print("Menu: button did selected: \(atIndex)") }
+        printDebug("Menu: button did selected: \(atIndex)")
         showMenu(false, withAnimation: false)
     }
     
     func menuCollapsed(_ circleMenu: CircleMenu) {
-        if debug { print("Menu: collapsed") }
+        printDebug("Menu: collapsed")
         showMenu(false, withAnimation: true)
     }
     
@@ -137,6 +140,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         widenTextField()
+        if Device.isPortrait() {
+            printDebug("New Orientation: Portrait")
+        } else {
+            printDebug("New Orientation: Landscape")
+        }
+        
         if UIDevice.current.orientation.isLandscape { if debug { print("New Orientation: Landscape") } }
         else { if debug { print("New Orientation: Portrait") } }
     }
@@ -147,6 +156,18 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         frame?.size.width = 10000
         textField?.frame = frame!
     }
+    
+    
+    
+    
+    // MARK:- Debug
+    
+    /// Prints input message log to console if global variable `debug` is set to `true`
+    func printDebug(_ text: String) {
+        if debug { print(text) }
+    }
+    
+    
 
 }
 

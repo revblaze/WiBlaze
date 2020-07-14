@@ -23,12 +23,14 @@ struct Glyph {
     //MARK:- Settings Glyphs
     
     // Dark Mode
+    /*
     static let moonOFF = UIImage(systemName: "moon")
     static let moonON = UIImage(systemName: "moon.fill")
     static func getMoonIcon() -> UIImage {
         if Settings.darkMode { return moonON! }
         else { return moonOFF! }
     }
+    */
     
 }
 

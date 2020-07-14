@@ -20,35 +20,71 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
-                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndh-Z7-DdO" customClass="CircleMenu" customModule="WiBlaze">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5OW-Tp-8eW"/>
+                                    <constraint firstAttribute="height" constant="60" id="k2J-M9-yf4"/>
+                                </constraints>
+                                <state key="normal" image="menu_icon"/>
+                                <state key="selected" image="menu_close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9vj-1r-rja"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="pTC-nc-uci" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="89F-HR-2yQ"/>
                             <constraint firstAttribute="bottom" secondItem="pTC-nc-uci" secondAttribute="bottom" id="DdA-Qn-aFP"/>
+                            <constraint firstItem="ndh-Z7-DdO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TgI-t9-Z6n"/>
                             <constraint firstItem="pTC-nc-uci" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cNt-EN-oIP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pTC-nc-uci" secondAttribute="trailing" id="upD-Tr-oR1"/>
+                            <constraint firstItem="ndh-Z7-DdO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vRg-jA-iCg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Evb-sY-8BH">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="lock.shield.fill" catalog="system" id="dK9-GS-tw9"/>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or type URL" textAlignment="natural" minimumFontSize="17" id="uKg-cH-gtx">
-                            <rect key="frame" x="128.5" y="10.5" width="157" height="23"/>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or type URL" textAlignment="natural" minimumFontSize="17" id="uKg-cH-gtx">
+                            <rect key="frame" x="129" y="11" width="157" height="23"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" image="Dots" id="dOk-RC-9mr">
+                        <barButtonItem key="rightBarButtonItem" image="circle" catalog="system" id="dOk-RC-9mr">
                             <color key="tintColor" name="Primary"/>
+                            <connections>
+                                <action selector="showCircleMenu:" destination="BYZ-38-t0r" id="3qY-mq-DMN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="circleMenuButton" destination="ndh-Z7-DdO" id="6lb-n5-in5"/>
                         <outlet property="menuButton" destination="dOk-RC-9mr" id="F0c-Uj-dge"/>
                         <outlet property="secureButton" destination="dK9-GS-tw9" id="oad-5J-Lyk"/>
                         <outlet property="textField" destination="uKg-cH-gtx" id="boT-Bh-hmN"/>
@@ -79,8 +115,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dots" width="23" height="23"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <image name="lock.shield.fill" catalog="system" width="128" height="121"/>
+        <image name="menu_close" width="120" height="120"/>
+        <image name="menu_icon" width="120" height="120"/>
         <namedColor name="Background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -69,7 +69,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Evb-sY-8BH">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="lock.shield.fill" catalog="system" id="dK9-GS-tw9"/>
+                        <barButtonItem key="leftBarButtonItem" image="lock.shield.fill" catalog="system" id="dK9-GS-tw9">
+                            <color key="tintColor" name="Primary"/>
+                        </barButtonItem>
                         <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search or type URL" textAlignment="natural" minimumFontSize="17" id="uKg-cH-gtx">
                             <rect key="frame" x="129" y="11" width="157" height="23"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>

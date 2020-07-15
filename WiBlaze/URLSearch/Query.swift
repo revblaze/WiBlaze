@@ -24,7 +24,12 @@ struct Query {
         }
         */
         if query.contains("http") || query.contains("www") || query.contains(".") {
-            return true
+            // Detect for search term "http"
+            if query.contains("http ") || query.contains("https ") {
+                return false
+            } else {
+                return true
+            }
         }
         return false
     }

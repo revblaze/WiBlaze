@@ -82,10 +82,21 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         printDebug("webView didFinish")
-        //let urlString = webView.url?.absoluteString
+        let urlString = webView.url?.absoluteString
         
         alignText()
         updateTextField(pretty: true)
+        
+        let secureColor = UIColor(named: "Secure")
+        //let insecureColor = UIColor(named: "Primary")
+        let grayColor = UIColor(named: "Disabled")
+        
+        if urlString!.contains("https://") {
+            secureButton.tintColor = secureColor
+            //menuButton.tintColor = secureColor
+        } else {
+            secureButton.tintColor = grayColor
+        }
         
     }
     

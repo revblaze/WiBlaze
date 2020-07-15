@@ -14,6 +14,8 @@ struct Live {
     static var prettyURL = ""       // ie. "google.com"
     static var fullURL = ""         // ie. https://google.com/...
     
+    static let isURL = !Query.isSearchTerm
+    
     static func set(_ query: String, forType: LiveType) {
         //forType.setLive = query
         
@@ -22,6 +24,12 @@ struct Live {
         case .pretty: prettyURL = query
         case .full: fullURL = query
         }
+    }
+    
+    static func printLive() {
+        print("searchTerm: \(searchTerm)")
+        print(" prettyURL: \(prettyURL)")
+        print("   fullURL: \(fullURL)")
     }
     
 }

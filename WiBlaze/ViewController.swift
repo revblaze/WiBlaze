@@ -59,7 +59,29 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         //progressBar.progress = 0
         //progressBar.alpha = 0
     }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        printDebug("webView didStartProvisionalNavigation")
+        alignText()
+        updateTextField(pretty: false)
+    }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        printDebug("webView didCommit")
+        
+        alignText()
+        updateTextField(pretty: true)
+        
+    }
 
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        printDebug("webView didFinish")
+        
+        alignText()
+        updateTextField(pretty: true)
+        
+    }
+    
     
     
     
@@ -75,45 +97,82 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     
     
-    // MARK: TextField Handler
+    // MARK:- TextField Handler
     
-    var firstLoad = true
-    
-    func updateTextField() {
+    func updateTextField(pretty: Bool) {
+        printDebug("Live.isURL: \(Live.isURL)")
+        alignText() // TEMP: NEEDED?
+        // Case: Search Term
         
+        if Query.isSearchTerm {                     //if !Live.isURL {
+            textField.text = Live.searchTerm
+        // Case: Pretty URL
+        } else if !Query.isSearchTerm && pretty {   //} else if Live.isURL && pretty {
+            textField.text = Live.prettyURL
+        // Case: Full URL
+        } else {
+            if (textField.text?.contains(Live.fullURL))! {
+                textField.text = Live.prettyURL
+            } else {
+                textField.text = Live.fullURL
+            }
+        }
+        Live.printLive()
     }
     
+    var firstLoad = true
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        let url = webView.url!
-        
-        if !firstLoad { updateLiveLoad(url.absoluteString) }
-        else { textField.text = "" }
-        
+        alignText()
+        // Case: First Load
+        if firstLoad {
+            textField.text = ""             // Empty TextField upon first selection
+            firstLoad = false               // Set firstLoad to false
+        } else {
+            updateTextField(pretty: false)  // Set full URL or search query
+        }
         return true
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         alignText()
         textField.becomeFirstResponder()
-        textField.selectAll(nil)
+        //textField.selectAll(nil)
+        textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let input = textField.text!
-        webView.load(Query.toURL(input))
+        let url = Query.getLoadable(textField.text!)
+        updateTextField(pretty: false)   // TEMP: NEEDED?
+        webView.load(url)
         textField.resignFirstResponder()
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if Query.isSearch { textField.text = Active.query }     // Set TextField: Search Query
-        else { textField.text = Active.urlString! }             // Set TextField: URL String
+        updateTextField(pretty: false) // TEMP: NEEDED?
         hideKeyboard()
     }
     // TextField: Denies entry to non-ASCII characters (ie. emojis)
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if !string.canBeConverted(to: String.Encoding.ascii) { return false }
         return true
+    }
+    /// Aligns content of TextField based on search or URL
+    func alignText() {
+        if textField.isEditing {
+            textField.textAlignment = .left
+        /*
+        } else if webView.isLoading && !Query.isSearchTerm {
+            textField.textAlignment = .left
+        */
+        } else {
+            textField.textAlignment = .center
+        }
+    }
+    /// Manually hides keyboard
+    func hideKeyboard() {
+        textField.resignFirstResponder()
+        //checkSecureAndUpdate()
     }
     
     

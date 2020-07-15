@@ -22,6 +22,9 @@
 		C2A437E024BDFFA60057E294 /* CircleMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437DC24BDFFA60057E294 /* CircleMenuLoader.swift */; };
 		C2A437E124BDFFA60057E294 /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437DE24BDFFA60057E294 /* CircleMenuButton.swift */; };
 		C2A437E624BE12AA0057E294 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E524BE12AA0057E294 /* Browser.swift */; };
+		C2A437E924BF584C0057E294 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E824BF584C0057E294 /* Query.swift */; };
+		C2A437ED24BF5F3B0057E294 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437EC24BF5F3B0057E294 /* Live.swift */; };
+		C2A437EF24BF67E80057E294 /* Pretty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437EE24BF67E80057E294 /* Pretty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		C2A437DC24BDFFA60057E294 /* CircleMenuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuLoader.swift; sourceTree = "<group>"; };
 		C2A437DE24BDFFA60057E294 /* CircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuButton.swift; sourceTree = "<group>"; };
 		C2A437E524BE12AA0057E294 /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
+		C2A437E824BF584C0057E294 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		C2A437EC24BF5F3B0057E294 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		C2A437EE24BF67E80057E294 /* Pretty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pretty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 				C2A437C124BDF1880057E294 /* Assets.xcassets */,
 				C2A437E224BE127D0057E294 /* Client */,
 				C2A437CF24BDF7DE0057E294 /* Helpers */,
+				C2A437E724BF583B0057E294 /* URLSearch */,
 				C2A437D824BDFFA60057E294 /* Libraries */,
 				C2A437C324BDF1880057E294 /* LaunchScreen.storyboard */,
 				C2A437C624BDF1880057E294 /* Info.plist */,
@@ -101,7 +108,6 @@
 		C2A437CF24BDF7DE0057E294 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C2A437D024BDF7DE0057E294 /* Clean.swift */,
 				C2A437D224BDF7DE0057E294 /* Device.swift */,
 				C2A437D124BDF7DE0057E294 /* Extensions.swift */,
 				C2A437D324BDF7DE0057E294 /* Glyphs.swift */,
@@ -149,6 +155,17 @@
 				C2A437E524BE12AA0057E294 /* Browser.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		C2A437E724BF583B0057E294 /* URLSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C2A437D024BDF7DE0057E294 /* Clean.swift */,
+				C2A437EC24BF5F3B0057E294 /* Live.swift */,
+				C2A437EE24BF67E80057E294 /* Pretty.swift */,
+				C2A437E824BF584C0057E294 /* Query.swift */,
+			);
+			path = URLSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,10 +243,13 @@
 				C2A437BD24BDF1860057E294 /* ViewController.swift in Sources */,
 				C2A437DF24BDFFA60057E294 /* CircleMenu.swift in Sources */,
 				C2A437D724BDF7DE0057E294 /* Glyphs.swift in Sources */,
+				C2A437E924BF584C0057E294 /* Query.swift in Sources */,
+				C2A437EF24BF67E80057E294 /* Pretty.swift in Sources */,
 				C2A437D424BDF7DE0057E294 /* Clean.swift in Sources */,
 				C2A437D624BDF7DE0057E294 /* Device.swift in Sources */,
 				C2A437B924BDF1860057E294 /* AppDelegate.swift in Sources */,
 				C2A437E624BE12AA0057E294 /* Browser.swift in Sources */,
+				C2A437ED24BF5F3B0057E294 /* Live.swift in Sources */,
 				C2A437BB24BDF1860057E294 /* SceneDelegate.swift in Sources */,
 				C2A437E124BDFFA60057E294 /* CircleMenuButton.swift in Sources */,
 				C2A437E024BDFFA60057E294 /* CircleMenuLoader.swift in Sources */,

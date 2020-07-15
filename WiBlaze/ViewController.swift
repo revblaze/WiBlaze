@@ -32,7 +32,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         showMenu(false, withAnimation: false)               // Hide Menu on Launch
         
         // Initializers
-        initWebView()
+        initWebView()               // Initalize WebView
+        widenTextField()            // Set URLSearchBar constraints
     }
     
     
@@ -74,6 +75,50 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     
     
+    // MARK: TextField Handler
+    
+    var firstLoad = true
+    
+    func updateTextField() {
+        
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let url = webView.url!
+        
+        if !firstLoad { updateLiveLoad(url.absoluteString) }
+        else { textField.text = "" }
+        
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        alignText()
+        textField.becomeFirstResponder()
+        textField.selectAll(nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let input = textField.text!
+        webView.load(Query.toURL(input))
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if Query.isSearch { textField.text = Active.query }     // Set TextField: Search Query
+        else { textField.text = Active.urlString! }             // Set TextField: URL String
+        hideKeyboard()
+    }
+    // TextField: Denies entry to non-ASCII characters (ie. emojis)
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if !string.canBeConverted(to: String.Encoding.ascii) { return false }
+        return true
+    }
+    
+    
+    
+    
     // MARK:- Circle Menu
     
     // Option 1: Home,     Refresh,   Fav/Save & Share,   History & Bookmarks,   Actions,           Settings
@@ -81,6 +126,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     // Colors 1: Orange,   Blue,      Red,                Purple,                Green,             Gray
     // Colors 2: Purple,   Blue,      Red,                Orange,                Green,             Gray     *
     // ACTIONS: Different from ShareSheet; Actions will allow you to manipulate the content of the Web Browser (ie. view source code, request desktop site, JavaScript console with injection, etc.)
+    // TODO: Find appropriate place to implement Print, possibly in Share or Actions
     
     //    let colors = [UIColor.redColor(), UIColor.grayColor(), UIColor.greenColor(), UIColor.purpleColor()]
     let items: [(icon: String, color: UIColor)] = [

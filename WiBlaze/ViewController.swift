@@ -30,6 +30,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         super.viewDidLoad()
         
         showMenu(false, withAnimation: false)               // Hide Menu on Launch
+        //circleMenuButton.backgroundColor = .black
+        //circleMenuButton.
         
         // Initializers
         initWebView()               // Initalize WebView
@@ -68,6 +70,10 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         printDebug("webView didCommit")
+        let urlString = webView.url?.absoluteString
+        
+        Query.getLoadable(urlString!)
+        Query.updateURL(urlString!)
         
         alignText()
         updateTextField(pretty: true)
@@ -76,6 +82,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         printDebug("webView didFinish")
+        //let urlString = webView.url?.absoluteString
         
         alignText()
         updateTextField(pretty: true)
@@ -100,10 +107,9 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     // MARK:- TextField Handler
     
     func updateTextField(pretty: Bool) {
-        printDebug("Live.isURL: \(Live.isURL)")
+        printDebug("Query.isSearchTerm: \(Query.isSearchTerm)")
         alignText() // TEMP: NEEDED?
         // Case: Search Term
-        
         if Query.isSearchTerm {                     //if !Live.isURL {
             textField.text = Live.searchTerm
         // Case: Pretty URL
@@ -136,7 +142,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     func textFieldDidBeginEditing(_ textField: UITextField) {
         alignText()
         textField.becomeFirstResponder()
-        //textField.selectAll(nil)
+        textField.selectAll(nil)
         textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
     }
     
@@ -219,7 +225,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         // Set highlighted image
         let highlightedImage = UIImage(named: items[atIndex].icon)?.withRenderingMode(.alwaysTemplate)
         button.setImage(highlightedImage, for: .highlighted)
-        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3) //alpha: 0.3)
     }
 
     func circleMenu(_: CircleMenu, buttonWillSelected _: UIButton, atIndex: Int) {

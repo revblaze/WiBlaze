@@ -11,7 +11,7 @@ import Foundation
 struct Query {
     
     static var text = ""
-    static var isSearchTerm = false
+    static var isSearchTerm = true
     static let urlSyntax = [".", "http", "www", ":", "/"]
     
     /// Determines if `query` is a URL or search term
@@ -90,6 +90,17 @@ struct Query {
             return loadableURL //addHTTP(query)
         }
         
+    }
+    
+    static func updateURL(_ url: String) {
+        Live.set(url, forType: .full)
+        //isSearchTerm = !isURL(url)
+        //if url.contains("https://www.google.com/search?&q") {
+        if url.contains("https://www.google.") {
+            isSearchTerm = true
+        } else {
+            isSearchTerm = false
+        }
     }
     
 }

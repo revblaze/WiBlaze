@@ -130,15 +130,19 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     func refresh() {
         webView.reload()
     }
+    /// Add page to favourite
     func favouritePage() {
         print("Favourite Page")
     }
+    /// Segue Bookmarks ViewController
     func openBookmarks() {
         print("Open Bookmarks")
     }
+    /// Open Action sheet
     func openAction() {
         print("Open Share Action")
     }
+    /// Segue Settings ViewController
     func openSettings() {
         print("Open Settings")
     }

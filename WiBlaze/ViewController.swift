@@ -126,6 +126,22 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     func loadHomepage() {
         webView.load(Settings.getHomepage())
     }
+    /// Reload current WebView URL
+    func refresh() {
+        webView.reload()
+    }
+    func favouritePage() {
+        print("Favourite Page")
+    }
+    func openBookmarks() {
+        print("Open Bookmarks")
+    }
+    func openAction() {
+        print("Open Share Action")
+    }
+    func openSettings() {
+        print("Open Settings")
+    }
     
     
     
@@ -251,7 +267,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         // Set highlighted image
         let highlightedImage = UIImage(named: items[atIndex].icon)?.withRenderingMode(.alwaysTemplate)
         button.setImage(highlightedImage, for: .highlighted)
-        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3) //alpha: 0.3)
+        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
     }
 
     func circleMenu(_: CircleMenu, buttonWillSelected _: UIButton, atIndex: Int) {
@@ -262,6 +278,13 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     func circleMenu(_: CircleMenu, buttonDidSelected _: UIButton, atIndex: Int) {
         printDebug("Menu: button did selected: \(atIndex)")
         showMenu(false, withAnimation: false)
+        if atIndex == 0 { loadHomepage() }
+        else if atIndex == 1 { refresh() }
+        else if atIndex == 2 { openAction() }
+        else if atIndex == 3 { openSettings() }
+        else if atIndex == 4 { openBookmarks() }
+        else if atIndex == 5 { favouritePage() }
+        else { print("Menu option is out of range") }
     }
     
     func menuCollapsed(_ circleMenu: CircleMenu) {

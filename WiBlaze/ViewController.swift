@@ -30,8 +30,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         super.viewDidLoad()
         
         showMenu(false, withAnimation: false)               // Hide Menu on Launch
-        //circleMenuButton.backgroundColor = .black
-        //circleMenuButton.
         
         // Initializers
         initWebView()               // Initalize WebView
@@ -42,6 +40,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     
     // MARK:- WebView
+    
     func initWebView() {
         webView.uiDelegate = self
         webView.navigationDelegate = self

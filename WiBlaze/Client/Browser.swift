@@ -12,7 +12,9 @@ struct Browser {
     
     // MARK: Browser Properties
     static let name = "WiBlaze"
-    static let defaultHome = URL(string: "https://google.com")
+    static let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    
+    static let defaultHome = URL(string: "https://www.google.com/")     // Default Homepage
     
     // UserAgents
     static func getUserAgent() -> String {

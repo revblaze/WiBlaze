@@ -34,6 +34,13 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         // Initializers
         initWebView()               // Initalize WebView
         widenTextField()            // Set URLSearchBar constraints
+        
+        /*
+        if Settings.hasLaunchedBefore {
+            Settings.setDefaults()
+        }
+        */
+        
     }
     
     
@@ -55,7 +62,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         webView.scrollView.keyboardDismissMode = .onDrag            // Hide Keyboard on WebView Drag
 
         // Load Homepage
-        webView.load(Browser.defaultHome!)
+        webView.load(Settings.getHomepage())
         
         //progressBar.progress = 0
         //progressBar.alpha = 0
@@ -109,6 +116,15 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         let hiddenMenu = circleMenuButton.isHidden
         if hiddenMenu { circleMenuButton.onTap() }
         showMenu(hiddenMenu, withAnimation: !hiddenMenu)
+    }
+    
+    
+    
+    
+    // MARK:- Menu Functions
+    /// Load homepage in WebView
+    func loadHomepage() {
+        webView.load(Settings.getHomepage())
     }
     
     
@@ -205,12 +221,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     //    let colors = [UIColor.redColor(), UIColor.grayColor(), UIColor.greenColor(), UIColor.purpleColor()]
     let items: [(icon: String, color: UIColor)] = [
-        ("menu_home", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),          // Home
-        ("menu_settings", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),      // Refresh
-        ("menu_home", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),       // Favourite
-        ("menu_settings", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),      // History/Bookmarks
-        ("menu_home", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),       // Share/Action
-        ("menu_settings", UIColor(red: 1, green: 0.39, blue: 0, alpha: 1))          // Settings
+        ("menu_home", UIColor(red: 0.49, green: 0.37, blue: 1.00, alpha: 1)),           // Home
+        ("menu_refresh", UIColor(red: 0.00, green: 0.47, blue: 1.00, alpha: 1)),        // Refresh
+        ("menu_share", UIColor(red: 0.03, green: 0.82, blue: 0.45, alpha: 1)),          // Share / Action
+        ("menu_settings", UIColor(red: 0.47, green: 0.47, blue: 0.47, alpha: 1)),       // Settings
+        ("menu_bookmarks", UIColor(red: 1.00, green: 0.62, blue: 0.10, alpha: 1)),      // Bookmarks
+        ("menu_favourite", UIColor(red: 1.00, green: 0.22, blue: 0.22, alpha: 1))       // Favourite
     ]
     
     /**

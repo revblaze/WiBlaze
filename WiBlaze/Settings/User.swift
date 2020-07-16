@@ -11,11 +11,14 @@ import Foundation
 // User Activity and Status (ie. hasLoggedIn, hasLaunchedBefore)
 struct User {
     
+    /*
     static let id = Defaults.string(forKey: Keys.username)
     static let password = Defaults.string(forKey: Keys.password)
     
     static let isLoggedIn = Defaults.bool(forKey: Keys.hasLoggedIn)
-    static let hasLaunchedBefore = Defaults.bool(forKey: Keys.hasLaunchedBefore)
+    */
+ 
+    
     
     
     /// Set default values for UserDefaults on first launch

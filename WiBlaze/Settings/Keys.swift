@@ -10,16 +10,17 @@ import Foundation
 
 struct Keys {
     
-    // MARK: User Keys
-    static let username = "UsernameKey"
-    static let password = "PasswordKey"
-    
-    static let hasLoggedIn = "UserLoggedInKey"
+    // MARK: System Keys
     static let hasLaunchedBefore = "UserLaunchedBeforeKey"
-    static let hasLaunchedUpdate = "UserLaunchedUpdate\(Client.version)"
-    
+    static let hasLaunchedUpdate = "UserLaunchedUpdate\(Browser.version!)"
     
     // MARK: Settings Keys
-    static let darkMode = "DarkModeKey"
+    
+    // Homepage
+    static let homepageURL = "HomepageKey"
+    static let homepageString = "HomepageStringKey"
+    // Restore Last Session
+    static let restoreLastSession = "RestoreLastSession"
+    static let lastSessionURL = "LastSessionURL"
     
 }

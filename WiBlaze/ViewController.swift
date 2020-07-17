@@ -77,8 +77,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         printDebug("webView didCommit")
         let urlString = webView.url?.absoluteString
-        
-        Query.getLoadable(urlString!)
+        // TEMP: Print warning workaround
+        print(Query.getLoadable(urlString!))
         Query.updateURL(urlString!)
         
         alignText()

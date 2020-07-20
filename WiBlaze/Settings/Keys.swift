@@ -20,7 +20,9 @@ struct Keys {
     static let homepageURL = "HomepageKey"
     static let homepageString = "HomepageStringKey"
     // Restore Last Session
-    static let restoreLastSession = "RestoreLastSession"
-    static let lastSessionURL = "LastSessionURL"
+    static let restoreLastSession = "RestoreLastSessionKey"
+    static let lastSessionURL = "LastSessionURLKey"
+    
+    
     
 }

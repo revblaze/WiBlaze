@@ -12,6 +12,9 @@
 		C2194A4824C09F6F009280C4 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2194A4424C09F6F009280C4 /* DefaultsManager.swift */; };
 		C2194A4924C09F6F009280C4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2194A4524C09F6F009280C4 /* User.swift */; };
 		C2658C2624E437D100ABEE0D /* QuickTableViewController in Frameworks */ = {isa = PBXBuildFile; productRef = C2658C2524E437D100ABEE0D /* QuickTableViewController */; };
+		C2658C2824E4384C00ABEE0D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2658C2724E4384C00ABEE0D /* SettingsViewController.swift */; };
+		C2658C2A24E4416C00ABEE0D /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2658C2924E4416C00ABEE0D /* Default.swift */; };
+		C2658C2C24E44FE100ABEE0D /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2658C2B24E44FE100ABEE0D /* Debug.swift */; };
 		C2A437B924BDF1860057E294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437B824BDF1860057E294 /* AppDelegate.swift */; };
 		C2A437BB24BDF1860057E294 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437BA24BDF1860057E294 /* SceneDelegate.swift */; };
 		C2A437BD24BDF1860057E294 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437BC24BDF1860057E294 /* ViewController.swift */; };
@@ -37,6 +40,9 @@
 		C2194A4324C09F6F009280C4 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C2194A4424C09F6F009280C4 /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 		C2194A4524C09F6F009280C4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C2658C2724E4384C00ABEE0D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C2658C2924E4416C00ABEE0D /* Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
+		C2658C2B24E44FE100ABEE0D /* Debug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		C2A437B524BDF1860057E294 /* WiBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A437B824BDF1860057E294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2A437BA24BDF1860057E294 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,10 +81,12 @@
 		C2194A3F24C09F2D009280C4 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				C2658C2724E4384C00ABEE0D /* SettingsViewController.swift */,
 				C2194A4424C09F6F009280C4 /* DefaultsManager.swift */,
 				C2194A4324C09F6F009280C4 /* Settings.swift */,
 				C2194A4224C09F6F009280C4 /* Keys.swift */,
 				C2194A4524C09F6F009280C4 /* User.swift */,
+				C2658C2924E4416C00ABEE0D /* Default.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 				C2A437D224BDF7DE0057E294 /* Device.swift */,
 				C2A437D124BDF7DE0057E294 /* Extensions.swift */,
 				C2A437D324BDF7DE0057E294 /* Glyphs.swift */,
+				C2658C2B24E44FE100ABEE0D /* Debug.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -272,6 +281,8 @@
 				C2A437BD24BDF1860057E294 /* ViewController.swift in Sources */,
 				C2194A4724C09F6F009280C4 /* Settings.swift in Sources */,
 				C2A437DF24BDFFA60057E294 /* CircleMenu.swift in Sources */,
+				C2658C2A24E4416C00ABEE0D /* Default.swift in Sources */,
+				C2658C2824E4384C00ABEE0D /* SettingsViewController.swift in Sources */,
 				C2A437D724BDF7DE0057E294 /* Glyphs.swift in Sources */,
 				C2A437E924BF584C0057E294 /* Query.swift in Sources */,
 				C2194A4824C09F6F009280C4 /* DefaultsManager.swift in Sources */,
@@ -284,6 +295,7 @@
 				C2A437BB24BDF1860057E294 /* SceneDelegate.swift in Sources */,
 				C2A437E124BDFFA60057E294 /* CircleMenuButton.swift in Sources */,
 				C2A437E024BDFFA60057E294 /* CircleMenuLoader.swift in Sources */,
+				C2658C2C24E44FE100ABEE0D /* Debug.swift in Sources */,
 				C2194A4924C09F6F009280C4 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

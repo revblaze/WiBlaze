@@ -26,7 +26,7 @@ struct Live {
         }
     }
     
-    static func printLive() {
+    static func debug() {
         print("searchTerm: \(searchTerm)")
         print(" prettyURL: \(prettyURL)")
         print("   fullURL: \(fullURL)")

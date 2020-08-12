@@ -18,6 +18,10 @@ struct Settings {
     static let homepageURL = Defaults.url(forKey: Keys.homepageURL)
     static let homepageString = Defaults.string(forKey: Keys.homepageString)
     
+    // NEW HOMEPAGE
+    static let homeString = Defaults.string(forKey: Keys.homepageString)
+    static let homeURL = URL(string: homeString!)
+    
     // Restore Last Session URL
     static let restoreLastSession = Defaults.bool(forKey: Keys.restoreLastSession)
     static let lastSessionURL = Defaults.string(forKey: Keys.lastSessionURL)
@@ -25,19 +29,15 @@ struct Settings {
     
     /// Set default values for UserDefaults on first launch
     static func setDefaults() {
-        Settings.save(Browser.defaultHome!, forKey: Keys.homepageURL)
-        Settings.save(defaultHomeString, forKey: Keys.homepageString)
+        Settings.save(Default.homeURL!, forKey: Keys.homepageURL)
+        Settings.save(Default.homeString, forKey: Keys.homepageString)
     }
     
     // Homepage
-    static let defaultHomeString = "https://www.google.com/"
     /// Return custom homepage URL or default URL as `String`
     static func getHomepage() -> String {
-        if let homepage = homepageString {
-            return homepage
-        } else {
-            return defaultHomeString
-        }
+        if let homepage = homepageString { return homepage }
+        else { return Default.homeString }
     }
     
     // Restore Last Session

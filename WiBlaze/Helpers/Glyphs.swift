@@ -22,6 +22,10 @@ struct Glyph {
     
     //MARK:- Settings Glyphs
     
+    static let home = UIImage(systemName: "house")
+    static let restoreLast = UIImage(systemName: "arrow.clockwise.circle")
+    
+    
     // Dark Mode
     /*
     static let moonOFF = UIImage(systemName: "moon")

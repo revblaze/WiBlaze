@@ -132,7 +132,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     }
     /// Add page to favourite
     func favouritePage() {
-        print("Favourite Page")
+        Debug.log("Favourite Page")
     }
     /// Segue Bookmarks ViewController
     func openBookmarks() {
@@ -145,7 +145,9 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     /// Segue Settings ViewController
     func openSettings() {
         print("Open Settings")
+        self.navigationController?.pushViewController(settingsVC, animated: true)
     }
+    let settingsVC = SettingsViewController()
     
     
     
@@ -169,7 +171,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
                 textField.text = Live.fullURL
             }
         }
-        Live.printLive()
+        Live.debug()
     }
     
     var firstLoad = true
@@ -319,6 +321,17 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         var frame: CGRect? = textField?.frame
         frame?.size.width = 10000
         textField?.frame = frame!
+    }
+    
+    
+    
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
     
     

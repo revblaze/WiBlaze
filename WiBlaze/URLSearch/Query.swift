@@ -39,7 +39,6 @@ struct Query {
             return URL(string: query)!
         } else {
             let url = "https://\(query)"
-            if debug { print("addHTTP url: \(url)") } // TEMP: DELETE
             return URL(string: url)!
         }
     }

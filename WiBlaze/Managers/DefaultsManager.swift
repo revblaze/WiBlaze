@@ -26,10 +26,10 @@ struct DefaultsManager {
     
     static func save(_ value: Any, forKey: String) {
         if allowedType(value) {
-            if debug { print("Setting Default: \(value), forKey: \(forKey)") }
+            Debug.log("Setting Default: \(value), forKey: \(forKey)")
             Defaults.set(value, forKey: forKey)
         } else {
-            if debug { print("Error: invalid Default type\nUnable to set Default: \(value), forKey: \(forKey)") }
+            Debug.log("Error: invalid Default type\nUnable to set Default: \(value), forKey: \(forKey)")
         }
     }
     

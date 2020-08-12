@@ -20,6 +20,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     @IBOutlet weak var backButton: UIBarButtonItem!         // Back Button
     @IBOutlet weak var secureButton: UIBarButtonItem!       // Secure Icon
     @IBOutlet weak var circleMenuButton: CircleMenu!        // CircleMenu Button
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!   // Top Bar Constraint
     
     // WebView Observers
     var webViewURLObserver: NSKeyValueObservation?          // Observer for URL
@@ -40,6 +41,10 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
             Settings.setDefaults()
         }
         */
+        
+        // OBSERVER: WebView URL (Detect Changes)
+        webViewURLObserver = webView.observe(\.url, options: .new) { [weak self] webView, change in
+            self?.urlDidChange("\(String(describing: change.newValue))") }
         
     }
     
@@ -70,6 +75,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         Debug.log("webView didStartProvisionalNavigation")
+        let urlString = webView.url?.absoluteString
         alignText()
         updateTextField(pretty: false)
     }
@@ -83,7 +89,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         
         alignText()
         updateTextField(pretty: true)
-        
+        resize(urlString!)
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
@@ -105,7 +111,29 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         }
         
         Settings.save(Live.fullURL, forKey: Keys.lastSessionURL)
+        resize(urlString!)
         
+    }
+    
+    
+    func resize(_ url: String) {
+        if Site.needsFullScreen(url) {
+            topConstraint.constant = navBarHeight
+            Debug.log("FullScreen URL: \(Live.fullURL), withHeight: \(navBarHeight)")
+        } else {
+            topConstraint.constant = 0
+            Debug.log("New Constraint: \(topConstraint.constant)")
+        }
+        
+    }
+    
+    
+    
+    // MARK:- URL Did Change
+    func urlDidChange(_ urlString: String) {
+        let url = Clean.url(urlString)
+        Debug.log("URL: \(url)")        // Debug: Print URL to Load
+        resize(url)                     // Resize Layout for Specific Domains
     }
     
     
@@ -139,11 +167,14 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     }
     /// Segue Bookmarks ViewController
     func openBookmarks() {
-        print("Open Bookmarks")
+        Debug.log("Open Bookmarks")
     }
     /// Open Action sheet
     func openAction() {
-        print("Open Share Action")
+        Debug.log("Open Share Action")
+        let items = [URL(string: Live.fullURL)!]
+        let actionSheet = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(actionSheet, animated: true)
     }
     /// Segue Settings ViewController
     func openSettings() {
@@ -341,8 +372,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
             Debug.log("New Orientation: Landscape")
         }
         
-        if UIDevice.current.orientation.isLandscape { if debug { print("New Orientation: Landscape") } }
-        else { if debug { print("New Orientation: Portrait") } }
+        if UIDevice.current.orientation.isLandscape { Debug.log("New Orientation: Landscape") }
+        else { Debug.log("New Orientation: Portrait") }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
+            self.resize(Live.fullURL)
+        }
     }
     
     /// Resizes `UITextField` in `UINavigationBar` to maximum possible width (called on device rotation)
@@ -365,5 +400,17 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     
     
 
+}
+
+
+extension UIViewController {
+
+    /**
+     *  Height of status bar + navigation bar (if navigation bar exist)
+     */
+    var navBarHeight: CGFloat {
+        return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
+            (self.navigationController?.navigationBar.frame.height ?? 0.0)
+    }
 }
 

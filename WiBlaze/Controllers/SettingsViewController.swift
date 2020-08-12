@@ -28,7 +28,7 @@ final class SettingsViewController: QuickTableViewController {
         tableContents = [
             
             Section(title: "Launch", rows: [
-                SwitchRow(text: "Restore Last Session", detailText: .subtitle("Set a custom homepage URL"), switchValue: Settings.restoreLastSession, icon: .image(Glyph.restoreLast!), action: didToggleSwitch()),
+                SwitchRow(text: "Restore Last Session", detailText: .subtitle("Set a custom homepage URL"), switchValue: Settings.restoreLiveSession, icon: .image(Glyph.restoreLast!), action: didToggleSwitch()),
                 NavigationRow(text: "Custom Homepage", detailText: .subtitle("Current: \(prettyHome)"), icon: .image(Glyph.home!), accessoryButtonAction: showDetail())
             ], footer: "Upon launching WiBlaze, you can either load your last page or start fresh with a custom homepage"),
             

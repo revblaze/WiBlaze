@@ -163,6 +163,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { action in
             Settings.save(Live.fullURL, forKey: Keys.homepageString)
             Settings.save(false, forKey: Keys.restoreLastSession)
+            Settings.restoreLiveSession = false
             self.doneCustomHomeAlert()
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))

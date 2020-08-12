@@ -85,10 +85,10 @@
 		C2194A3F24C09F2D009280C4 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				C2194A4324C09F6F009280C4 /* Settings.swift */,
-				C2194A4224C09F6F009280C4 /* Keys.swift */,
-				C2194A4524C09F6F009280C4 /* User.swift */,
 				C2658C2924E4416C00ABEE0D /* Default.swift */,
+				C2194A4224C09F6F009280C4 /* Keys.swift */,
+				C2194A4324C09F6F009280C4 /* Settings.swift */,
+				C2194A4524C09F6F009280C4 /* User.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";

@@ -23,6 +23,7 @@ struct Settings {
     static let homeURL = URL(string: homeString!)
     
     // Restore Last Session URL
+    static var restoreLiveSession = restoreLastSession
     static let restoreLastSession = Defaults.bool(forKey: Keys.restoreLastSession)
     static let lastSessionURL = Defaults.string(forKey: Keys.lastSessionURL)
     
@@ -37,7 +38,8 @@ struct Settings {
     // Launch URL
     /// Returns launch `URL` as `String`, depending on Restore Last Session and Custom Homepage
     static func getLaunchURL() -> String {
-        return getLastSessionURL()
+        if Settings.restoreLiveSession { return getLastSessionURL() }
+        else { return getHomepage() }
     }
     
     // Homepage
@@ -49,15 +51,9 @@ struct Settings {
     // Restore Last Session
     /// Return URL of last session if enabled or homepage if disabled
     static func getLastSessionURL() -> String {
-        if Settings.restoreLastSession {
-            if let url = Settings.lastSessionURL {
-                return url
-            } else {
-                return homeString!
-            }
-        } else {
-            return getHomepage()
-        }
+        if let url = Settings.lastSessionURL {
+            return url
+        } else { return homeString! }
     }
     
     

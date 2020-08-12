@@ -36,7 +36,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         widenTextField()            // Set URLSearchBar constraints
         
         /*
-        if Settings.hasLaunchedBefore {
+        if !Settings.hasLaunchedBefore {
             Settings.setDefaults()
         }
         */
@@ -62,20 +62,20 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         webView.scrollView.keyboardDismissMode = .onDrag            // Hide Keyboard on WebView Drag
 
         // Load Homepage
-        webView.load(Settings.getHomepage())
+        webView.load(Settings.getLaunchURL())
         
         //progressBar.progress = 0
         //progressBar.alpha = 0
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        printDebug("webView didStartProvisionalNavigation")
+        Debug.log("webView didStartProvisionalNavigation")
         alignText()
         updateTextField(pretty: false)
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        printDebug("webView didCommit")
+        Debug.log("webView didCommit")
         let urlString = webView.url?.absoluteString
         // TEMP: Print warning workaround
         print(Query.getLoadable(urlString!))
@@ -87,7 +87,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        printDebug("webView didFinish")
+        Debug.log("webView didFinish")
         let urlString = webView.url?.absoluteString
         
         alignText()
@@ -103,6 +103,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         } else {
             secureButton.tintColor = grayColor
         }
+        
+        Settings.save(Live.fullURL, forKey: Keys.lastSessionURL)
         
     }
     
@@ -133,6 +135,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     /// Add page to favourite
     func favouritePage() {
         Debug.log("Favourite Page")
+        setCustomHome()
     }
     /// Segue Bookmarks ViewController
     func openBookmarks() {
@@ -145,9 +148,34 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     /// Segue Settings ViewController
     func openSettings() {
         print("Open Settings")
+        let settingsVC = SettingsViewController()
         self.navigationController?.pushViewController(settingsVC, animated: true)
     }
-    let settingsVC = SettingsViewController()
+    
+    
+    
+    
+    // MARK:- Extended Functions
+    func setCustomHome() {
+        let home = Alerts.customHome
+        let alert = UIAlertController(title: home.title, message: home.message, preferredStyle: .actionSheet)
+
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { action in
+            Settings.save(Live.fullURL, forKey: Keys.homepageString)
+            Settings.save(false, forKey: Keys.restoreLastSession)
+            self.doneCustomHomeAlert()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func doneCustomHomeAlert() {
+        let done = Alerts.setHome
+        let alert = UIAlertController(title: done.title, message: done.message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
     
     
     
@@ -155,7 +183,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     // MARK:- TextField Handler
     
     func updateTextField(pretty: Bool) {
-        printDebug("Query.isSearchTerm: \(Query.isSearchTerm)")
+        Debug.log("Query.isSearchTerm: \(Query.isSearchTerm)")
         alignText() // TEMP: NEEDED?
         // Case: Search Term
         if Query.isSearchTerm {                     //if !Live.isURL {
@@ -277,12 +305,12 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     }
 
     func circleMenu(_: CircleMenu, buttonWillSelected _: UIButton, atIndex: Int) {
-        printDebug("Menu: button will selected: \(atIndex)")
+        Debug.log("Menu: button will selected: \(atIndex)")
         showMenu(false, withAnimation: false)
     }
 
     func circleMenu(_: CircleMenu, buttonDidSelected _: UIButton, atIndex: Int) {
-        printDebug("Menu: button did selected: \(atIndex)")
+        Debug.log("Menu: button did selected: \(atIndex)")
         showMenu(false, withAnimation: false)
         if atIndex == 0 { loadHomepage() }
         else if atIndex == 1 { refresh() }
@@ -294,7 +322,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     }
     
     func menuCollapsed(_ circleMenu: CircleMenu) {
-        printDebug("Menu: collapsed")
+        Debug.log("Menu: collapsed")
         showMenu(false, withAnimation: true)
     }
     
@@ -307,9 +335,9 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         super.viewWillTransition(to: size, with: coordinator)
         widenTextField()
         if Device.isPortrait() {
-            printDebug("New Orientation: Portrait")
+            Debug.log("New Orientation: Portrait")
         } else {
-            printDebug("New Orientation: Landscape")
+            Debug.log("New Orientation: Landscape")
         }
         
         if UIDevice.current.orientation.isLandscape { if debug { print("New Orientation: Landscape") } }
@@ -332,16 +360,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    
-    
-    
-    
-    // MARK:- Debug
-    
-    /// Prints input message log to console if global variable `debug` is set to `true`
-    func printDebug(_ text: String) {
-        if debug { print(text) }
     }
     
     

@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        Settings.save(Live.fullURL, forKey: Keys.lastSessionURL)
+    }
 
     // MARK: UISceneSession Lifecycle
 

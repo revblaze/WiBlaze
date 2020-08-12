@@ -115,8 +115,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
         
     }
     
-    
+    // TODO: Figure out how to resize WebView when facing sites like YouTube
+    // The code below fixes the YouTube layout issue, but messes up every website that follows
     func resize(_ url: String) {
+        topConstraint.constant = navBarHeight
+        /*
         if Site.needsFullScreen(url) {
             topConstraint.constant = navBarHeight
             Debug.log("FullScreen URL: \(Live.fullURL), withHeight: \(navBarHeight)")
@@ -124,6 +127,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UITe
             topConstraint.constant = 0
             Debug.log("New Constraint: \(topConstraint.constant)")
         }
+        */
         
     }
     
